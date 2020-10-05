@@ -3,6 +3,18 @@ import BackgroundImage from "gatsby-background-image"
 import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
+const query = graphql`
+  {
+    file(relativePath: {eq: "mainBcg.png"}) {
+      childImageSharp {
+        fluid {
+          src
+        }
+      }
+    }
+  }
+`
+
 const Background = () => {
   return <h2>background image component</h2>
 }
@@ -18,7 +30,6 @@ const fadeIn = keyframes`
 
 const Wrapper = styled.section`
   .bcg {
-    /* MUST!!!!!! */
     min-height: 100vh;
     margin-top: -5rem;
     display: grid;
