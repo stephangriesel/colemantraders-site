@@ -12,10 +12,12 @@ import {
 import SEO from "../components/seo"
 const HomePage = ({ data }) => {
   console.log('Query Data:', data);
+  const { allAirtable: { nodes: projects } } = data
   return (
     <Layout>
       <Hero />
       <About />
+      <Projects projects={projects} title="Latest Projects" />
     </Layout>
   )
 }
