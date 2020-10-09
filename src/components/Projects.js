@@ -28,11 +28,10 @@ const Projects = ({ projects: data, title, page }) => {
       })}
     </div>
     {
-      !page && (
-        <Link to="/projects" className="btn">
-          all projects
+      !page &&
+      <Link to="/projects" className="btn">
+        all projects
         </Link>
-      )
     }
 
   </Wrapper>
