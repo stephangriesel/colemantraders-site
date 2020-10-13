@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
   const { allAirtable: { nodes: projects } } = data
   return (
     <Layout>
-      <Hero />
+      <Hero projects={projects} />
       <About />
       <Projects projects={projects} title="Latest Projects" />
       <Slider />
