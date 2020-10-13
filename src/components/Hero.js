@@ -11,14 +11,29 @@ const Hero = ({ projects }) => {
   })
   console.log('Test Images:', images);
   const [index, setIndex] = React.useState(0);
+  React.useEffect(() => {
+    const lastIndex = images.length - 1
+    if (index < 0) {
+      setIndex(lastIndex)
+    }
+    if (index > lastIndex) {
+      setIndex(0)
+    }
+  })
   return (
     <Wrapper>
-      <Background image={images[0]}>
+      <Background image={images[index]}>
         <article>
           <h3>test</h3>
           <Link to="/projects">Projects</Link>
 
         </article>
+        <button className="prev-btn" onClick={() => setIndex(index - 1)}>
+          <FiChevronLeft />
+        </button>
+        <button className="next-btn" onClick={() => setIndex(index + 1)}>
+          <FiChevronRight />
+        </button>
       </Background>
     </Wrapper>
 
