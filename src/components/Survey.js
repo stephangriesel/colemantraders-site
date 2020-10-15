@@ -22,9 +22,35 @@ const Survey = () => {
     setItems(newItems);
     setLoading(false);
   }
+
+  const placeVote = async id => {
+    setLoading(true);
+    const tempItems = [...items].map((item) => {
+      if (item.id === id) {
+        let { id, fields } = item;
+        fields = { ...fields, votes: fields.votes + 1 }
+        return { id, fields }
+      } else {
+        return item
+      }
+    })
+
+    const records = await base('Survey')
+      .update(tempItems)
+      .catch(err => console.log(err))
+    const newItems = records.map(records => {
+      const { id, fields } = records
+      return { id, fields }
+    })
+    setItems(newItems);
+    setLoading(false);
+  }
+
   useEffect(() => {
     getRecords();
   }, [])
+
+
   console.log('Survey Item Data:', items);
   return <Wrapper className="section">
     <div className="container">
@@ -48,7 +74,7 @@ const Survey = () => {
                     <h4>{name}</h4>
                     <p>{votes}</p>
                   </div>
-                  <button onClick={() => console.log("clicked")}>
+                  <button onClick={() => placeVote(id)}>
                     <FaVoteYea />
                   </button>
                 </li>
