@@ -1,8 +1,36 @@
 import React from "react"
 import styled from "styled-components"
 
-const SearchButtons = () => {
-  return <h2>search buttons</h2>
+const SearchButtons = ({ projects, setProjects, setBackToAll }) => {
+  const [index, setIndex] = React.useState(0);
+  const types = ['all', ...new Set(projects.map(project => {
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+    return project.data.type
+  }))]
+  console.log('Check Types:', types);
+
+  const showProjects = (type, typeIndex) => {
+    setIndex(typeIndex)
+    if (type === 'all') {
+      setBackToAll();
+    } else {
+      const tempProjects = projects.filter(
+        project => project.data.type === type
+      )
+      setProjects(tempProjects)
+    }
+  }
+  return <Wrapper>
+    {types.map((type, typeIndex) => {
+      return <button
+        key={type}
+        className={index === typeIndex ? 'active' : undefined}
+        onClick={() => showProjects(type, typeIndex)}
+      >
+        {type}
+      </button>
+    })}
+  </Wrapper>
 }
 const Wrapper = styled.section`
   display: flex;
