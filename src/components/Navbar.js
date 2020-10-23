@@ -7,7 +7,13 @@ import NavLink from "./NavLink"
 import { GatsbyContext } from '../context/context';
 
 const Navbar = () => {
-  const { isSidebarOpen, showSidebar } = useContext(GatsbyContext);
+  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext);
+  const tempLinks = [
+    ...new Set(links.map(link => {
+      return link.page
+    }))
+  ]
+  console.log("Check temp links:", tempLinks);
   return (
     <Wrapper>
       <div className="nav-center">
@@ -22,15 +28,9 @@ const Navbar = () => {
           )}
         </div>
         <ul className="nav-links">
-          <li>
-            <button>Products</button>
-          </li>
-          <li>
-            <button>Company</button>
-          </li>
-          <li>
-            <button>Developers</button>
-          </li>
+          {tempLinks.map((page, index) => {
+            return <NavLink key={index} page={page} />
+          })}
         </ul>
       </div>
     </Wrapper>
