@@ -25,23 +25,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`, `700`],
-          },
-          {
-            family: `Open Sans`,
-          },
-          {
-            family: `Caveat`,
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.GATSBY_AIRTABLE_API,
@@ -50,13 +33,6 @@ module.exports = {
           {
             baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
             tableName: `Projects`,
-            mapping: {
-              image: `fileNode`
-            }
-          },
-          {
-            baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-            tableName: `Customers`,
             mapping: {
               image: `fileNode`
             }

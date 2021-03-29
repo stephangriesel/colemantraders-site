@@ -18,8 +18,8 @@ const HomePage = ({ data }) => {
       <Hero projects={projects} />
       <About />
       <GridProjects projects={projects} title="Latest Projects" />
-      <Survey />
-      <Slider />
+      {/* <Survey />
+      <Slider /> */}
     </Layout>
   )
 }
