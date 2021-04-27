@@ -23,7 +23,7 @@ export default [
   {
     page: 'contact',
     label: 'contact details',
-    url: `/products/contact`,
+    url: `/contact/contact`,
     icon: <FaAlipay className='icon' />,
   },
 ];
