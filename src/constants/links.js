@@ -1,41 +1,36 @@
 import React from 'react';
-import { FaCcStripe, FaCreditCard, FaAlipay } from 'react-icons/fa';
-import { GrServices } from 'react-icons/gr';
+import { GrGroup, GrContactInfo } from 'react-icons/gr';
+import { RiBuilding2Line } from 'react-icons/ri';
+import { GiMineTruck, GiFuelTank } from 'react-icons/gi';
 export default [
   {
     page: 'services',
     label: 'containers',
     url: `/services/container`,
-    icon: <GrServices className='icon' />,
+    icon: <RiBuilding2Line className='icon' />,
   },
   {
     page: 'services',
     label: 'plant',
     url: `/services/hire`,
-    icon: <GrServices className='icon' />,
+    icon: <GiMineTruck className='icon' />,
   },
   {
     page: 'services',
     label: 'fuel',
     url: `/services/fuel`,
-    icon: <GrServices className='icon' />,
-  },
-  {
-    page: 'company',
-    label: 'contact',
-    url: `/products/contact`,
-    icon: <FaCcStripe className='icon' />,
+    icon: <GiFuelTank className='icon' />,
   },
   {
     page: 'company',
     label: 'about',
     url: `/company/about`,
-    icon: <FaCcStripe className='icon' />,
+    icon: <GrGroup className='icon' />,
   },
   {
     page: 'contact',
-    label: 'contact details',
+    label: 'contact',
     url: `/contact/contact`,
-    icon: <FaAlipay className='icon' />,
+    icon: <GrContactInfo className='icon' />,
   },
 ];
