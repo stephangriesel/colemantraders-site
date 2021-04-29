@@ -4,8 +4,20 @@ import { GrServices } from 'react-icons/gr';
 export default [
   {
     page: 'services',
-    label: 'plant hire',
+    label: 'containers',
+    url: `/services/container`,
+    icon: <GrServices className='icon' />,
+  },
+  {
+    page: 'services',
+    label: 'plant',
     url: `/services/hire`,
+    icon: <GrServices className='icon' />,
+  },
+  {
+    page: 'services',
+    label: 'fuel',
+    url: `/services/fuel`,
     icon: <GrServices className='icon' />,
   },
   {

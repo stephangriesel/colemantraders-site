@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-const Hire = (props) => {
+const Fuel = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
@@ -11,7 +11,7 @@ const Hire = (props) => {
         <div>
           <h1>{path}</h1>
           <Link to='/' className='btn'>
-            Hire
+            Fuel
           </Link>
         </div>
       </Wrapper>
@@ -42,4 +42,4 @@ const Wrapper = styled.main`
   }
 `;
 
-export default Hire;
+export default Fuel;
