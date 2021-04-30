@@ -10,6 +10,8 @@ Variables
   --clr-primary-2: hsl(21, 84%, 25%);
   --clr-primary-3: hsl(21, 81%, 29%);
   --clr-primary-4: hsl(21, 77%, 34%);
+  /* alternative colours */
+  --clr-yellow-1: #f6b419;
   /* primary/main color */
   --clr-primary-5: hsl(21, 62%, 45%);
 
@@ -37,8 +39,8 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;

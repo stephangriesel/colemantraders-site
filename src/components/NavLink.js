@@ -1,28 +1,30 @@
-import React, { useContext } from "react"
+import React, { useContext } from 'react';
 
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { GatsbyContext } from '../context/context'
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { GatsbyContext } from '../context/context';
 const NavLink = ({ page }) => {
-  const { links } = useContext(GatsbyContext)
-  return <Wrapper>
-    <button>{page}</button>
-    <div className="links">
-      {links.map((link, index) => {
-        const { url, label, icon } = link
-        if (link.page === page) {
-          return (
-            <Link to={url} key={index}>
-              {icon}
-              {label}
-            </Link>
-          )
-        }
-      })}
-      <div className="caret"></div>
-    </div>
-  </Wrapper>
-}
+  const { links } = useContext(GatsbyContext);
+  return (
+    <Wrapper>
+      <button>{page}</button>
+      <div className='links'>
+        {links.map((link, index) => {
+          const { url, label, icon } = link;
+          if (link.page === page) {
+            return (
+              <Link to={url} key={index}>
+                {icon}
+                {label}
+              </Link>
+            );
+          }
+        })}
+        <div className='caret'></div>
+      </div>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.li`
   padding: 1rem 0;
@@ -61,14 +63,8 @@ const Wrapper = styled.li`
       color: #0a2540;
       text-transform: capitalize;
       font-weight: 700;
-      .icon {
-        color: #88add2;
-      }
       &:hover {
-        color: #88add2;
-        .icon {
-          color: #0a2540;
-        }
+        color: red;
       }
     }
   }
@@ -87,6 +83,6 @@ const Wrapper = styled.li`
     left: 50%;
     transform: translateX(-50%);
   }
-`
+`;
 
-export default NavLink
+export default NavLink;

@@ -1,41 +1,43 @@
-import React, { useContext } from "react"
-import styled from "styled-components"
-import logo from "../images/logo.svg"
-import { GoThreeBars } from "react-icons/go"
-import { Link } from "gatsby"
-import NavLink from "./NavLink"
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import logo from '../images/logo.svg';
+import { GoThreeBars } from 'react-icons/go';
+import { Link } from 'gatsby';
+import NavLink from './NavLink';
 import { GatsbyContext } from '../context/context';
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext);
   const tempLinks = [
-    ...new Set(links.map(link => {
-      return link.page
-    }))
-  ]
-  console.log("Check temp links:", tempLinks);
+    ...new Set(
+      links.map((link) => {
+        return link.page;
+      })
+    ),
+  ];
+  console.log('Check temp links:', tempLinks);
   return (
     <Wrapper>
-      <div className="nav-center">
-        <div className="nav-header">
-          <Link to="/">
-            <img src={logo} alt="logo"></img>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          <Link to='/'>
+            <img src={logo} alt='logo'></img>
           </Link>
           {!isSidebarOpen && (
-            <button className="toggle-btn" onClick={showSidebar}>
+            <button className='toggle-btn' onClick={showSidebar}>
               <GoThreeBars />
             </button>
           )}
         </div>
-        <ul className="nav-links">
+        <ul className='nav-links'>
           {tempLinks.map((page, index) => {
-            return <NavLink key={index} page={page} />
+            return <NavLink key={index} page={page} />;
           })}
         </ul>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.nav`
   position: relative;
@@ -67,11 +69,11 @@ const Wrapper = styled.nav`
       border-radius: 2rem;
       border: transparent;
       color: var(--clr-white);
-      background: var(--clr-primary-5);
+      background: var(--clr-grey-1);
       cursor: pointer;
       transition: var(--transition);
       &:hover {
-        background: var(--clr-primary-3);
+        background: #f6b419;
       }
     }
   }
@@ -88,7 +90,7 @@ const Wrapper = styled.nav`
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 0 2rem;
-      grid-gap: 0 4rem;
+      grid-gap: 0 20rem;
       align-items: center;
     }
     .nav-links {
@@ -113,6 +115,6 @@ const Wrapper = styled.nav`
       position: relative;
     }
   }
-`
+`;
 
-export default Navbar
+export default Navbar;

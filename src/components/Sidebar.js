@@ -1,27 +1,34 @@
-import React, { useContext } from "react"
-import styled from "styled-components"
-import { MdClose } from "react-icons/md"
-import { Link } from "gatsby"
-import { GatsbyContext } from '../context/context'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import { MdClose } from 'react-icons/md';
+import { Link } from 'gatsby';
+import { GatsbyContext } from '../context/context';
 
 const Sidebar = () => {
   const { links, hideSidebar } = useContext(GatsbyContext);
-  console.log("Sidebar context:", links);
+  console.log('Sidebar context:', links);
 
-  return <Wrapper>
-    <div className="container">
-      <button onClick={hideSidebar}>
-        <MdClose className="icon" />
-      </button>
-      <div className="links">
-        {links.map((link, index) => {
-          const { url, label, icon } = link
-          return <Link to={url} key={index} onClick={hideSidebar}>{icon}{label}</Link>
-        })}
+  return (
+    <Wrapper>
+      <div className='container'>
+        <button onClick={hideSidebar}>
+          <MdClose className='icon' />
+        </button>
+        <div className='links'>
+          {links.map((link, index) => {
+            const { url, label, icon } = link;
+            return (
+              <Link to={url} key={index} onClick={hideSidebar}>
+                {icon}
+                {label}
+              </Link>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  </Wrapper>
-}
+    </Wrapper>
+  );
+};
 const Wrapper = styled.aside`
   position: fixed;
   top: 0;
@@ -69,18 +76,8 @@ const Wrapper = styled.aside`
         text-transform: capitalize;
         font-weight: 700;
         font-size: 1.2rem;
-        .icon {
-          color: #88add2;
-          font-size: 2rem;
-        }
-        &:hover {
-          color: #88add2;
-          .icon {
-            color: #0a2540;
-          }
-        }
       }
     }
   }
-`
-export default Sidebar
+`;
+export default Sidebar;
