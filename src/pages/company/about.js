@@ -25,7 +25,7 @@ const About = (props) => {
         <div>
           <span>Icon</span>
           <h4>Unique Approach</h4>
-          <p>
+          <div>
             The Why:
             <ul>
               <li>
@@ -33,8 +33,8 @@ const About = (props) => {
                 Generation
               </li>
             </ul>
-          </p>
-          <p>
+          </div>
+          <div>
             The Hows:
             <ul>
               <li>Do the right thing, the first time - Always</li>
@@ -44,8 +44,8 @@ const About = (props) => {
               <li>Embrace transparency</li>
               <li>Do it all in the spirit of Coleman Traders</li>
             </ul>
-          </p>
-          <p>
+          </div>
+          <div>
             The Whats:
             <ul>
               <li>Identify & invest in improvement & development</li>
@@ -54,12 +54,12 @@ const About = (props) => {
               <li>Incorporate new technology</li>
               <li>Improve financial security</li>
             </ul>
-          </p>
+          </div>
         </div>
         <div>
           <span>Icon</span>
           <h4>Core Values</h4>
-          <p>
+          <div>
             <ul>
               <li>Commitment to customers above all else</li>
               <li>We can generate profit without acting unethically</li>
@@ -69,7 +69,7 @@ const About = (props) => {
               <li>Awareness of social and physical environment</li>
               <li>We look beyond the present to deliver future value</li>
             </ul>
-          </p>
+          </div>
         </div>
       </Wrapper>
     </Layout>
