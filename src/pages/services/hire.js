@@ -9,10 +9,33 @@ const Hire = (props) => {
     <Layout>
       <Wrapper>
         <div>
-          <h1>{path}</h1>
-          <Link to='/' className='btn'>
+          <h1>Plant Hire</h1>
+          {/* <Link to='/' className='btn'>
             Hire
-          </Link>
+          </Link> */}
+          <p>
+            With over 10 years of experience, Coleman Traders (Pty) Ltd can
+            confidently offer innovative solutions for any construction and
+            mining Plant Hire requirements. We work 24/7 365 days. With
+            committed customer service and dedication to 100% reliability, we
+            can assure our clients that we can make contracts and tenders look
+            effortless. Maintenance teams are on standby to ensure maximum
+            production. Other measures such as spare wheels and other wear &
+            tear items can be held on site for timeously recoveries on
+            breakdowns.
+          </p>
+          <ul>
+            <li>
+              Yellow machinery (Rollers, Graders, Excavators, TLB’s, ADT’s,
+              Front End Loaders, etc.)
+            </li>
+            <li>Water trucks</li>
+            <li>Tipper trucks</li>
+            <li>Forklifts</li>
+            <li>Generators</li>
+            <li>Lowbed</li>
+            <li>Transportation services</li>
+          </ul>
         </div>
       </Wrapper>
     </Layout>

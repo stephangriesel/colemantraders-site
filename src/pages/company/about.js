@@ -77,24 +77,30 @@ const About = (props) => {
 };
 
 const Wrapper = styled.main`
-  /* margin-top: 2rem; */
   background: var(--clr-primary-8);
-  /* height: auto; */
-  /* min-height: calc(100vh - 5rem); */
+  height: auto;
+  min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
+  margin-top: -5rem;
+
+  .section-center {
+    margin-top: 7rem;
+  }
 
   div {
     text-align: center;
     color: var(--clr-white);
   }
   h1 {
+    margin-top: 2rem;
     font-size: 2rem;
     color: var(--clr-primary-5);
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {
     h1 {
+      margin-top: 2rem;
       font-size: 4rem;
     }
   }
