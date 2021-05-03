@@ -13,7 +13,7 @@ const NavLink = ({ page }) => {
           const { url, label, icon } = link;
           if (link.page === page) {
             return (
-              <Link to={url} key={index}>
+              <Link className='link-temp' to={url} key={index}>
                 {icon}
                 {label}
               </Link>
@@ -54,6 +54,7 @@ const Wrapper = styled.li`
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
     grid-gap: 1rem 4rem;
+    /* visibility: visible; */
     a {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -63,9 +64,6 @@ const Wrapper = styled.li`
       color: #0a2540;
       text-transform: capitalize;
       font-weight: 700;
-      &:hover {
-        color: red;
-      }
     }
   }
   &:hover .links {

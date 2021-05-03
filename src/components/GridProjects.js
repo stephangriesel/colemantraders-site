@@ -1,30 +1,34 @@
-import React from "react"
-import Title from "./Title"
-import Image from "gatsby-image"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from 'react';
+import Title from './Title';
+import Image from 'gatsby-image';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 const GridProjects = ({ projects, title }) => {
-  return <Wrapper>
-    <Title title={title || 'Projects'} />
-    <div className="tile-layout">
-      {projects.map((project, index) => {
-        const { id } = project
-        const { name, type } = project.data
-        const fluid = project.data.image.localFiles[0].childImageSharp.fluid
-        return <article key={index} className={`div-${index}`}>
-          <Image className="img" fluid={fluid} />
-          <div className="info">
-            <p>- {type} -</p>
-            <h3>{name}</h3>
-          </div>
-        </article>
-      })}
-    </div>
-    <Link to="/projects" className="btn">
-      All Projects
-    </Link>
-  </Wrapper>
-}
+  return (
+    <Wrapper>
+      <Title title={title || 'Projects'} />
+      <div className='tile-layout'>
+        {projects.map((project, index) => {
+          const { id } = project;
+          const { name, type } = project.data;
+          const fluid = project.data.image.localFiles[0].childImageSharp.fluid;
+          return (
+            <article key={index} className={`div-${index}`}>
+              <Image className='img' fluid={fluid} />
+              <div className='info'>
+                <p>- {type} -</p>
+                <h3>{name}</h3>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      {/* <Link to='/projects' className='btn'>
+        All Projects
+      </Link> */}
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
@@ -41,7 +45,7 @@ const Wrapper = styled.section`
     grid-template-rows: 300px 300px;
     grid-auto-rows: 300px;
   }
-  /* GOTCHA!!!!! */
+
   .img {
     height: 100%;
     border-radius: var(--radius);
@@ -91,8 +95,8 @@ const Wrapper = styled.section`
     .tile-layout {
       display: grid;
       grid-template-areas:
-        "a b b"
-        "a c d";
+        'a b b'
+        'a c d';
       .div-0 {
         grid-area: a;
       }
@@ -114,6 +118,6 @@ const Wrapper = styled.section`
     margin: 0 auto;
     margin-top: 3rem;
   }
-`
+`;
 
-export default GridProjects
+export default GridProjects;
