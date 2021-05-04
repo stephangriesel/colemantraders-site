@@ -1,14 +1,14 @@
 import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 const Container = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>
-        <div>
+        <div className='info-box'>
           <h1>Container Services</h1>
           <p>
             Coleman Traders (Pty) Ltd can assist you with the right solutions to
@@ -30,6 +30,12 @@ const Container = (props) => {
             Container
           </Link> */}
         </div>
+        <div className='image-box'>
+          <StaticImage
+            src='https://res.cloudinary.com/dvme554nj/image/upload/v1620105823/coleman/container_hpi8zy.jpg'
+            alt='container'
+          />
+        </div>
       </Wrapper>
     </Layout>
   );
@@ -39,13 +45,20 @@ const Wrapper = styled.main`
   margin-top: -5rem;
   background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
-  display: grid;
+  display: flex;
   place-items: center;
 
   /* .section-center {
     margin-top: 7rem;
   } */
-
+  .info-box {
+    background: red;
+    margin: 1rem 9rem;
+  }
+  .image-box {
+    background: green;
+    margin: 1rem 5rem;
+  }
   div {
     text-align: center;
     color: var(--clr-white);
