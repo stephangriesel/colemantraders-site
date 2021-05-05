@@ -2,17 +2,15 @@ import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 const Fuel = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>
-        <div>
+        <div className='info-box'>
           <h1>Fuel Wholesale Services</h1>
-          {/* <Link to='/' className='btn'>
-            Fuel
-          </Link> */}
           <p>
             Focusing on 40 000l best quality product deliveries at a time, we
             are enabled and driven to provide 100% reliable personal service due
@@ -40,6 +38,12 @@ const Fuel = (props) => {
             site. This will include all accessories and equipment as per demand.
           </p>
         </div>
+        <div className='image-box'>
+          <StaticImage
+            src='https://res.cloudinary.com/dvme554nj/image/upload/v1620187660/coleman/fuel.jpg'
+            alt='fuel'
+          />
+        </div>
       </Wrapper>
     </Layout>
   );
@@ -49,8 +53,26 @@ const Wrapper = styled.main`
   margin-top: -5rem;
   background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
+  background: black;
+  padding-top: 5rem;
+
+  ul {
+    list-style-type: square;
+  }
+
+  .info-box {
+    background: red;
+    h1,
+    p {
+      margin-top: 2rem;
+    }
+  }
+  .image-box {
+    background: green;
+  }
 
   div {
     text-align: center;
@@ -62,6 +84,8 @@ const Wrapper = styled.main`
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
     h1 {
       font-size: 4rem;
     }

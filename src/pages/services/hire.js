@@ -1,18 +1,15 @@
 import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 const Hire = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>
-        <div>
+        <div className='info-box'>
           <h1>Plant Hire</h1>
-          {/* <Link to='/' className='btn'>
-            Hire
-          </Link> */}
           <p>
             With over 10 years of experience, Coleman Traders (Pty) Ltd can
             confidently offer innovative solutions for any construction and
@@ -37,6 +34,12 @@ const Hire = (props) => {
             <li>Transportation services</li>
           </ul>
         </div>
+        <div className='image-box'>
+          <StaticImage
+            src='https://res.cloudinary.com/dvme554nj/image/upload/v1620189044/planthire.jpg'
+            alt='plant hire'
+          />
+        </div>
       </Wrapper>
     </Layout>
   );
@@ -44,11 +47,23 @@ const Hire = (props) => {
 
 const Wrapper = styled.main`
   margin-top: -5rem;
-  background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
+  background: black;
+  padding-top: 5rem;
 
+  .info-box {
+    background-color: red;
+    h1,
+    p {
+      margin-top: 2rem;
+    }
+  }
+  .image-box {
+    background: green;
+  }
   div {
     text-align: center;
     color: var(--clr-white);
@@ -59,6 +74,8 @@ const Wrapper = styled.main`
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
     h1 {
       font-size: 4rem;
     }

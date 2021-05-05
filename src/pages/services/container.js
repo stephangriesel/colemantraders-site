@@ -43,21 +43,22 @@ const Container = (props) => {
 
 const Wrapper = styled.main`
   margin-top: -5rem;
-  background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
   display: flex;
+  flex-direction: column;
   place-items: center;
+  background: black;
+  padding-top: 5rem;
 
-  /* .section-center {
-    margin-top: 7rem;
-  } */
   .info-box {
-    background: red;
-    margin: 1rem 9rem;
+    background-color: red;
+    h1,
+    p {
+      margin-top: 2rem;
+    }
   }
   .image-box {
     background: green;
-    margin: 1rem 5rem;
   }
   div {
     text-align: center;
@@ -69,6 +70,8 @@ const Wrapper = styled.main`
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row;
     h1 {
       font-size: 4rem;
     }
