@@ -22,7 +22,7 @@ const About = (props) => {
               reputation.
             </p>
           </div>
-          <div class='left'>
+          <div class='left-big'>
             <span>icon</span>
             <h2>Our Mission</h2>
             <p>
@@ -36,7 +36,7 @@ const About = (props) => {
               responsibilities.
             </p>
           </div>
-          <div class='right'>
+          <div class='right-big'>
             <span>icon</span>
             <h2>Our Vision</h2>
             <p>
@@ -46,13 +46,11 @@ const About = (props) => {
               distributing company in South Africa.
             </p>
           </div>
-        </div>
-        <div class='grid-container-more'>
-          <div class='top-more'>
+          <div class='middle'>
             <span>icon</span>
             <h2>Unique Approach</h2>
           </div>
-          <div class='more-info-one'>
+          <div class='bottom-one'>
             <span>icon</span>
             <h2>The Why</h2>
             <p>
@@ -60,7 +58,7 @@ const About = (props) => {
               Generation
             </p>
           </div>
-          <div class='more-info-two'>
+          <div class='bottom-two'>
             <span>icon</span>
             <h2>The Hows</h2>
             <ul>
@@ -72,26 +70,30 @@ const About = (props) => {
               <li>Do it all in the spirit of Coleman Traders</li>
             </ul>
           </div>
-          <div class='more-info-three'>
+          <div class='bottom-three'>
             <span>icon</span>
             <h2>The What's</h2>
-            <li>Identify & invest in improvement & development</li>
-            <li>Delight our customers</li>
-            <li>Honour our commitments</li>
-            <li>Incorporate new technology</li>
-            <li>Improve financial security</li>
+            <ul>
+              <li>Identify & invest in improvement & development</li>
+              <li>Delight our customers</li>
+              <li>Honour our commitments</li>
+              <li>Incorporate new technology</li>
+              <li>Improve financial security</li>
+            </ul>
           </div>
-        </div>
-        <div>
-          <span>icon</span>
-          <h2>Core Values</h2>
-          <li>Commitment to customers above all else</li>
-          <li>We can generate profit without acting unethically</li>
-          <li>Great just isn’t good enough</li>
-          <li>Connect with transparency, dignity and respect</li>
-          <li>Act with courage</li>
-          <li>Awareness of social and physical environment</li>
-          <li>We look beyond the present to deliver future value</li>
+          <div class='bottom-four'>
+            <span>icon</span>
+            <h2>Core Values</h2>
+            <ul>
+              <li>Commitment to customers above all else</li>
+              <li>We can generate profit without acting unethically</li>
+              <li>Great just isn’t good enough</li>
+              <li>Connect with transparency, dignity and respect</li>
+              <li>Act with courage</li>
+              <li>Awareness of social and physical environment</li>
+              <li>We look beyond the present to deliver future value</li>
+            </ul>
+          </div>
         </div>
       </Wrapper>
     </Layout>
@@ -106,53 +108,53 @@ const Wrapper = styled.main`
   place-items: center;
   margin-top: -5rem;
 
+  // NEW START
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      'top top . .'
-      'left right . .';
+      'top top top top'
+      'left-big left-big right-big right-big'
+      'middle middle middle middle'
+      'bottom-one bottom-two bottom-three bottom-four';
   }
 
   .top {
     grid-area: top;
   }
 
-  .left {
-    grid-area: left;
+  .left-big {
+    grid-area: left-big;
   }
 
-  .right {
-    grid-area: right;
+  .right-big {
+    grid-area: right-big;
   }
 
-  .grid-container-more {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      'top-more top-more top-more .'
-      'more-info-one more-info-two more-info-three .';
+  .middle {
+    grid-area: middle;
   }
 
-  .top-more {
-    grid-area: top-more;
+  .bottom-one {
+    grid-area: bottom-one;
   }
 
-  .more-info-one {
-    grid-area: more-info-one;
+  .bottom-two {
+    grid-area: bottom-two;
   }
 
-  .more-info-two {
-    grid-area: more-info-two;
+  .bottom-three {
+    grid-area: bottom-three;
   }
 
-  .more-info-three {
-    grid-area: more-info-three;
+  .bottom-four {
+    grid-area: bottom-four;
   }
+
+  // NEW STOP
 
   .section-center {
     margin-top: 7rem;
