@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 const Fuel = (props) => {
   const path = props.location.pathname.slice(1);
@@ -10,7 +9,7 @@ const Fuel = (props) => {
     <Layout>
       <Wrapper>
         <div className='info-box'>
-          <h1>Fuel Wholesale Services</h1>
+          <h2>Fuel Wholesale Services</h2>
           <p>
             Focusing on 40 000l best quality product deliveries at a time, we
             are enabled and driven to provide 100% reliable personal service due
@@ -51,12 +50,10 @@ const Fuel = (props) => {
 
 const Wrapper = styled.main`
   margin-top: -5rem;
-  background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
   place-items: center;
-  background: black;
   padding-top: 5rem;
 
   ul {
@@ -64,19 +61,16 @@ const Wrapper = styled.main`
   }
 
   .info-box {
-    background: red;
     h1,
     p {
       margin-top: 2rem;
     }
   }
   .image-box {
-    background: green;
   }
 
   div {
     text-align: center;
-    color: var(--clr-white);
   }
   h1 {
     font-size: 2rem;

@@ -48,7 +48,7 @@ const Wrapper = styled.li`
     transform: translateX(-50%);
     visibility: hidden;
     padding: 2rem;
-    background: var(--clr-white);
+    background: var(--clr-grey-10);
     border-radius: var(--radius);
     display: grid;
     grid-template-columns: 1fr 1fr;

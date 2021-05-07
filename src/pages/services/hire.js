@@ -9,7 +9,7 @@ const Hire = (props) => {
     <Layout>
       <Wrapper>
         <div className='info-box'>
-          <h1>Plant Hire</h1>
+          <h2>Plant Hire</h2>
           <p>
             With over 10 years of experience, Coleman Traders (Pty) Ltd can
             confidently offer innovative solutions for any construction and
@@ -51,18 +51,15 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   place-items: center;
-  background: black;
   padding-top: 5rem;
 
   .info-box {
-    background-color: red;
     h1,
     p {
       margin-top: 2rem;
     }
   }
   .image-box {
-    background: green;
   }
   div {
     text-align: center;

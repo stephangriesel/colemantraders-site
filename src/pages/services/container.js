@@ -9,7 +9,7 @@ const Container = (props) => {
     <Layout>
       <Wrapper>
         <div className='info-box'>
-          <h1>Container Services</h1>
+          <h2>Container Services</h2>
           <p>
             Coleman Traders (Pty) Ltd can assist you with the right solutions to
             fulfil your container needs. Our cost-effective rates is one of the
@@ -47,18 +47,15 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   place-items: center;
-  background: black;
   padding-top: 5rem;
 
   .info-box {
-    background-color: red;
     h1,
     p {
       margin-top: 2rem;
     }
   }
   .image-box {
-    background: green;
   }
   div {
     text-align: center;

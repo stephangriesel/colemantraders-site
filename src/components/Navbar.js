@@ -41,7 +41,7 @@ const Navbar = () => {
 
 const Wrapper = styled.nav`
   position: relative;
-  background: transparent;
+  background: var(--clr-grey-1);
   z-index: 1;
   height: 5rem;
   display: flex;
@@ -52,7 +52,7 @@ const Wrapper = styled.nav`
     max-width: var(--max-width);
   }
   .nav-header {
-    color: var(--clr-white);
+    color: var(--clr-grey-1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +69,7 @@ const Wrapper = styled.nav`
       border-radius: 2rem;
       border: transparent;
       color: var(--clr-white);
-      background: var(--clr-grey-1);
+      background: var(--clr-grey-3);
       cursor: pointer;
       transition: var(--transition);
       &:hover {

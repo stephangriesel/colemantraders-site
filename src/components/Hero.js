@@ -1,63 +1,65 @@
-import React from "react"
-import Background from "./Background"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
+import React from 'react';
+import Background from './Background';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 const Hero = ({ projects }) => {
   const images = projects.map((item) => {
-    const { data: { image: { localFiles } } } = item;
+    const {
+      data: {
+        image: { localFiles },
+      },
+    } = item;
     const image = localFiles[0].childImageSharp.fluid;
     return image;
-  })
+  });
   console.log('Test Images:', images);
   const [index, setIndex] = React.useState(0);
   React.useEffect(() => {
-    const lastIndex = images.length - 1
+    const lastIndex = images.length - 1;
     if (index < 0) {
-      setIndex(lastIndex)
+      setIndex(lastIndex);
     }
     if (index > lastIndex) {
-      setIndex(0)
+      setIndex(0);
     }
-  })
+  });
   return (
     <Wrapper>
       <Background image={images[index]}>
         <article>
           <h3>test</h3>
-          <Link to="/projects">Projects</Link>
-
+          <Link to='/projects'>Projects</Link>
         </article>
-        <button className="prev-btn" onClick={() => setIndex(index - 1)}>
+        <button className='prev-btn' onClick={() => setIndex(index - 1)}>
           <FiChevronLeft />
         </button>
-        <button className="next-btn" onClick={() => setIndex(index + 1)}>
+        <button className='next-btn' onClick={() => setIndex(index + 1)}>
           <FiChevronRight />
         </button>
-        <div className="dots">
+        <div className='dots'>
           {images.map((_, btnIndex) => {
-            return <span
-              key={btnIndex}
-              onClick={() => {
-                setIndex(btnIndex)
-              }}
-              className={index === btnIndex ? 'active' : undefined}
-            >
-
-            </span>
+            return (
+              <span
+                key={btnIndex}
+                onClick={() => {
+                  setIndex(btnIndex);
+                }}
+                className={index === btnIndex ? 'active' : undefined}
+              ></span>
+            );
           })}
         </div>
       </Background>
     </Wrapper>
-
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   article {
     width: 85vw;
     max-width: 800px;
-    color: var(--clr-white);
+
     text-align: center;
     h1 {
       text-transform: uppercase;
@@ -68,7 +70,7 @@ const Wrapper = styled.section`
     }
     h3 {
       font-weight: 400;
-      font-family: "Caveat", cursive;
+      font-family: 'Caveat', cursive;
     }
     a {
       background: transparent;
@@ -76,7 +78,6 @@ const Wrapper = styled.section`
       padding: 0.25rem 1rem;
       text-transform: capitalize;
       letter-spacing: 5px;
-      color: var(--clr-white);
       font-size: 1rem;
       cursor: pointer;
       transition: var(--transition);
@@ -160,6 +161,6 @@ const Wrapper = styled.section`
       background-color: transparent;
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;

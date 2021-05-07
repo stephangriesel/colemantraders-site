@@ -101,8 +101,6 @@ const About = (props) => {
 };
 
 const Wrapper = styled.main`
-  background: var(--clr-primary-8);
-  /* height: auto; */
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
@@ -120,12 +118,10 @@ const Wrapper = styled.main`
 
   div {
     text-align: center;
-    color: var(--clr-white);
   }
   h1 {
     margin-top: 2rem;
     font-size: 2rem;
-    color: var(--clr-primary-5);
     margin-bottom: 1.5rem;
   }
 
