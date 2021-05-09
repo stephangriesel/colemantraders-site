@@ -63,7 +63,6 @@ const Wrapper = styled.main`
   }
   div {
     text-align: center;
-    color: var(--clr-white);
   }
   h1 {
     font-size: 2rem;

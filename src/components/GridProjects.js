@@ -67,11 +67,9 @@ const Wrapper = styled.section`
       width: 100%;
       opacity: 0;
       transition: var(--transition);
-      color: var(--clr-white);
       text-align: center;
       p {
         margin-bottom: 0.5rem;
-        color: var(--clr-white);
         text-transform: uppercase;
       }
     }

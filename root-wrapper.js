@@ -1,6 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import { GatsbyProvider } from './src/context/context'
+import { GatsbyProvider } from './src/context/context';
 
 const GlobalStyle = createGlobalStyle`
 /*
@@ -67,8 +67,6 @@ Global Styles
 }
 body {
   font-family: var(--ff-secondary);
-  background: var(--clr-white);
-  color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -108,7 +106,6 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-3);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -172,15 +169,13 @@ p {
   }
 }
 
-`
+`;
 
 export const wrapRootElement = ({ element }) => {
-  return (<>
-
-    <GlobalStyle />
-    <GatsbyProvider>
-      {element}
-    </GatsbyProvider>
-  </>
-  )
-}
+  return (
+    <>
+      <GlobalStyle />
+      <GatsbyProvider>{element}</GatsbyProvider>
+    </>
+  );
+};

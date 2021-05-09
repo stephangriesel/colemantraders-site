@@ -27,10 +27,10 @@ const Hero = ({ projects }) => {
   return (
     <Wrapper>
       <Background image={images[index]}>
-        <article>
-          <h3>test</h3>
+        {/* <article>
+          <h3>Test</h3>
           <Link to='/projects'>Projects</Link>
-        </article>
+        </article> */}
         <button className='prev-btn' onClick={() => setIndex(index - 1)}>
           <FiChevronLeft />
         </button>
@@ -70,7 +70,6 @@ const Wrapper = styled.section`
     }
     h3 {
       font-weight: 400;
-      font-family: 'Caveat', cursive;
     }
     a {
       background: transparent;

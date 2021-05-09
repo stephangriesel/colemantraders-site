@@ -45,7 +45,7 @@ const Wrapper = styled.main`
   margin-top: -5rem;
   min-height: calc(100vh - 5rem);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   place-items: center;
   padding-top: 5rem;
 
@@ -59,7 +59,6 @@ const Wrapper = styled.main`
   }
   div {
     text-align: center;
-    color: var(--clr-white);
   }
   h1 {
     font-size: 2rem;

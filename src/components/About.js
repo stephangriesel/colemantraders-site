@@ -30,7 +30,6 @@ const Wrapper = styled.section`
     grid-gap: 2rem;
     .icon {
       font-size: 4rem;
-      color: var(--clr-grey-1);
       margin-bottom: 1rem;
     }
     h4 {
@@ -38,7 +37,6 @@ const Wrapper = styled.section`
       font-weight: 500;
     }
     p {
-      color: var(--clr-grey-3);
       max-width: 35em;
     }
     @media (min-width: 768px) {
