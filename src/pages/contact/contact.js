@@ -9,7 +9,7 @@ const Contact = (props) => {
     <Layout>
       <Wrapper>
         <div>
-          <h1>{path}</h1>
+          {/* <h1>{path}</h1> */}
           <p>
             368 Main Street, Waterkloof, Pretoria, 0145
             <ul>
@@ -40,9 +40,9 @@ const Contact = (props) => {
               </li>
             </ul>
           </p>
-          <Link to='/' className='btn'>
-            About
-          </Link>
+          {/* <Link to='/' className='btn'>
+            Go
+          </Link> */}
         </div>
       </Wrapper>
     </Layout>

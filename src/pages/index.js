@@ -19,9 +19,9 @@ const HomePage = ({ data }) => {
     <Layout>
       <Hero projects={projects} />
       <About />
-      <GridProjects projects={projects} title='' />
-      {/* <Survey />
-      <Slider /> */}
+      {/* <GridProjects projects={projects} title='' /> */}
+      {/* <Survey /> */}
+      {/* <Slider /> */}
     </Layout>
   );
 };
