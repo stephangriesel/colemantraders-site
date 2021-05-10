@@ -4,10 +4,10 @@ import {
   Layout,
   Hero,
   About,
-  Projects,
-  Survey,
-  Slider,
-  GridProjects,
+  // Projects,
+  // Survey,
+  // Slider,
+  // GridProjects,
 } from '../components';
 import SEO from '../components/seo';
 const HomePage = ({ data }) => {
@@ -17,6 +17,7 @@ const HomePage = ({ data }) => {
   } = data;
   return (
     <Layout>
+      <SEO title='Home' />
       <Hero projects={projects} />
       <About />
       {/* <GridProjects projects={projects} title='' /> */}

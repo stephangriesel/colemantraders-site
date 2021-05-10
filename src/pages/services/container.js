@@ -2,12 +2,15 @@ import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
+import SEO from '../../components/seo';
+
 const Container = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>
+        <SEO title='Container Services' />
         <div className='info-box'>
           <h2>Container Services</h2>
           <p>

@@ -1,13 +1,15 @@
 import React from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import SEO from '../../components/seo';
+
 const Contact = (props) => {
   const path = props.location.pathname.slice(1);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>
+        <SEO title='Contact' />
         <div>
           {/* <h1>{path}</h1> */}
           <p>

@@ -2,10 +2,13 @@ import React from 'react';
 import { Layout } from '../components';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import SEO from '../components/seo';
+
 const Error = () => {
   return (
     <Layout>
       <Wrapper>
+        <SEO title='404 Not Found' />
         <div>
           <h1>Oops.</h1>
           <h3>The page you are looking for doesn't exist.</h3>

@@ -5,7 +5,7 @@ const queries = require('./src/constants/algolia');
 module.exports = {
   siteMetadata: {
     title: `Coleman Traders`,
-    description: `Coleman traders `,
+    description: `Containers and plant hire/sales`,
     author: `@stephangriesel`,
     titleTemplate: `%s | Coleman Traders`,
     url: `https://www.colemantraders.co.za`,

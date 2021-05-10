@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import { Layout, Projects, Algolia } from '../components';
+import SEO from '../components/seo';
 
 const ProjectsPage = ({ data }) => {
   const {
@@ -9,6 +10,7 @@ const ProjectsPage = ({ data }) => {
   } = data;
   return (
     <Wrapper>
+      <SEO title='Projects' />
       <Layout>
         <Projects title='Our Projects' projects={projects} page />
         {/* <Algolia /> */}
