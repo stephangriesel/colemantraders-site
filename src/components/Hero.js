@@ -115,7 +115,7 @@ const Wrapper = styled.section`
   }
   .next-btn:hover,
   .prev-btn:hover {
-    color: var(--clr-primary-5);
+    color: var(--clr-grey-1);
   }
   .prev-btn {
     left: 0;
