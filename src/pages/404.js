@@ -20,7 +20,6 @@ const Error = () => {
 
 const Wrapper = styled.main`
   margin-top: -5rem;
-  background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
