@@ -8,6 +8,7 @@ Variables
   /* primary colours */
   --clr-primary-hover: hsl(42, 92%, 53%);
   --clr-grey-1: rgba(16, 42, 66, 0.7);
+  --clr-grey-2: rgba(175, 175, 175, 0.7);
   /* alternative colours */
   --clr-yellow-1: #f6b419;
   --clr-grey-10: #f1f5f8;

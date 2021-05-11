@@ -10,8 +10,8 @@ module.exports = {
     titleTemplate: `%s | Coleman Traders`,
     url: `https://www.colemantraders.co.za`,
     image: `mainBcg.png`,
-    twitterUsername: `@stephangriesel`,
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,

@@ -37,6 +37,8 @@ const Container = (props) => {
           <StaticImage
             src='https://res.cloudinary.com/dvme554nj/image/upload/v1620105823/coleman/container_hpi8zy.jpg'
             alt='container'
+            height={400}
+            placeholder='dominantColor'
           />
         </div>
       </Wrapper>
@@ -51,14 +53,17 @@ const Wrapper = styled.main`
   flex-direction: column-reverse;
   place-items: center;
   padding-top: 5rem;
-
+  justify-content: center;
   .info-box {
+    width: 30em;
+    margin: 3em;
     h1,
     p {
       margin-top: 2rem;
     }
   }
   .image-box {
+    margin-top: 1em;
   }
   div {
     text-align: center;
@@ -73,6 +78,9 @@ const Wrapper = styled.main`
     flex-direction: row;
     h1 {
       font-size: 4rem;
+    }
+    .image-box {
+      margin-top: 0;
     }
   }
 `;

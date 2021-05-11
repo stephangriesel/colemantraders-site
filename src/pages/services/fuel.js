@@ -23,27 +23,39 @@ const Fuel = (props) => {
             several major fuel refineries . We strongly believe to support local
             communities and individuals, considering and following all
             environmental, safety and legislative factors and procedures.
-            Deliveries are based all over South Africa. Products include:
+            Deliveries are based all over South Africa.
           </p>
-          <ul>
-            <li>Diesel 50ppm</li>
-            <li>Illuminating Paraffin</li>
-            <li>FOL</li>
-            <li>Petrol</li>
-            <li>LSR</li>
-            <li>Fluorine Gas</li>
-            <li>LP Gas</li>
-          </ul>
-          <p>
-            Our products and services are not limited. We also sell brand new
-            and rebuilt tanks according to your requirements delivered to your
-            site. This will include all accessories and equipment as per demand.
-          </p>
+          <div className='info-double'>
+            <div className='info-double-left'>
+              <ul>
+                <span>
+                  <strong>Products include:</strong>
+                </span>
+                <li>Diesel 50ppm</li>
+                <li>Illuminating Paraffin</li>
+                <li>FOL</li>
+                <li>Petrol</li>
+                <li>LSR</li>
+                <li>Fluorine Gas</li>
+                <li>LP Gas</li>
+              </ul>
+            </div>
+            <div className='info-double-right'>
+              <p>
+                Our products and services are not limited. We also sell brand
+                new and rebuilt tanks according to your requirements delivered
+                to your site. This will include all accessories and equipment as
+                per demand.
+              </p>
+            </div>
+          </div>
         </div>
         <div className='image-box'>
           <StaticImage
             src='https://res.cloudinary.com/dvme554nj/image/upload/v1620187660/coleman/fuel.jpg'
             alt='fuel'
+            height={400}
+            placeholder='dominantColor'
           />
         </div>
       </Wrapper>
@@ -58,20 +70,22 @@ const Wrapper = styled.main`
   flex-direction: column-reverse;
   place-items: center;
   padding-top: 5rem;
-
-  ul {
-    list-style-type: square;
-  }
-
+  justify-content: center;
   .info-box {
+    width: 30em;
+    margin: 3em;
     h1,
     p {
       margin-top: 2rem;
     }
+    .info-double {
+      display: flex;
+      flex-direction: column;
+    }
   }
   .image-box {
+    margin-top: 1em;
   }
-
   div {
     text-align: center;
   }
@@ -83,8 +97,30 @@ const Wrapper = styled.main`
   @media (min-width: 800px) {
     display: flex;
     flex-direction: row;
+    .info-box {
+      .info-double {
+        display: flex;
+        flex-direction: row;
+        margin: 2em 0;
+        align-items: center;
+        .info-double-left,
+        .info-double-right {
+          background: var(--clr-grey-2);
+          width: 50%;
+          padding: 0.5em;
+          margin: 0.5em;
+          border-radius: 0.5em;
+        }
+        p {
+          margin-top: 0;
+        }
+      }
+    }
     h1 {
       font-size: 4rem;
+    }
+    .image-box {
+      margin-top: 0;
     }
   }
 `;

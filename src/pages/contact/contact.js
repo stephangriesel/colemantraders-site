@@ -42,10 +42,8 @@ const Contact = (props) => {
               </li>
             </ul>
           </p>
-          {/* <Link to='/' className='btn'>
-            Go
-          </Link> */}
         </div>
+        <div>form goes here</div>
       </Wrapper>
     </Layout>
   );
