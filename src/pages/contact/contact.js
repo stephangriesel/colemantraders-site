@@ -10,40 +10,42 @@ const Contact = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='Contact' />
-        <div>
-          {/* <h1>{path}</h1> */}
-          <p>
-            368 Main Street, Waterkloof, Pretoria, 0145
-            <ul>
-              <li>Office: 012 997 1801</li>
-              <li>
-                Johnny Coleman: 072 596 8362 /
-                <a href='mailto:johnny@colemantraders.co.za'>
-                  johnny@colemantraders.co.za
-                </a>
-              </li>
-              <li>
-                Anzel Smit: 084 738 0783 /
-                <a href='mailto:anzel@colemantraders.co.za'>
-                  anzel@colemantraders.co.za
-                </a>
-              </li>
-              <li>
-                Jonty Pretorius: 061 392 3343 /
-                <a href='mailto:jonty@colemantraders.co.za'>
-                  jonty@colemantraders.co.za
-                </a>
-              </li>
-              <li>
-                Lucille Pretorius: 074 158 7642 /
-                <a href='mailto:lucille@colemantraders.co.za'>
-                  lucille@colemantraders.co.za
-                </a>
-              </li>
-            </ul>
-          </p>
+        <div className='contact-wrapper'>
+          <div className='info-box'>
+            {/* <h1>{path}</h1> */}
+            <p>
+              368 Main Street, Waterkloof, Pretoria, 0145
+              <ul>
+                <li>Office: 012 997 1801</li>
+                <li>
+                  <a href='mailto:johnny@colemantraders.co.za'>
+                    <strong>Johnny Coleman</strong>
+                  </a>
+                  : 072 596 8362
+                </li>
+                <li>
+                  <a href='mailto:anzel@colemantraders.co.za'>
+                    <strong>Anzel Smit</strong>
+                  </a>
+                  : 084 738 0783
+                </li>
+                <li>
+                  <a href='mailto:jonty@colemantraders.co.za'>
+                    <strong>Jonty Pretorius</strong>
+                  </a>
+                  : 061 392 3343
+                </li>
+                <li>
+                  <a href='mailto:lucille@colemantraders.co.za'>
+                    <strong>Lucille Pretorius</strong>
+                  </a>
+                  : 074 158 7642
+                </li>
+              </ul>
+            </p>
+          </div>
+          <div className='form-box'>form goes here</div>
         </div>
-        <div>form goes here</div>
       </Wrapper>
     </Layout>
   );
@@ -54,7 +56,9 @@ const Wrapper = styled.main`
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
-
+  a {
+    color: var(--clr-grey-1);
+  }
   div {
     text-align: center;
   }
@@ -62,9 +66,25 @@ const Wrapper = styled.main`
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @media (min-width: 800px) {
     h1 {
       font-size: 4rem;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-direction: row;
+      .info-box {
+        width: 20em;
+      }
+      .form-box {
+        width: 20em;
+      }
     }
   }
 `;
