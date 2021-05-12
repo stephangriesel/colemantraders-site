@@ -13,7 +13,7 @@ const About = (props) => {
         <div class='grid-container'>
           <div class='top'>
             <span>Icon</span>
-            <h2>Director: Johnny Coleman</h2>
+            <h3>Director: Johnny Coleman</h3>
             <p>
               Coleman Traders (Pty) Ltd was registered in 2016, focusing on
               selling containers and plant hire/sales. Since the economy took
@@ -27,7 +27,7 @@ const About = (props) => {
           </div>
           <div class='left-big'>
             <span>icon</span>
-            <h2>Our Mission</h2>
+            <h3>Our Mission</h3>
             <p>
               Coleman Traders (Pty) Ltd is dedicated to delivering effective,
               efficient, respectful services with integrity and accountability
@@ -41,7 +41,7 @@ const About = (props) => {
           </div>
           <div class='right-big'>
             <span>icon</span>
-            <h2>Our Vision</h2>
+            <h3>Our Vision</h3>
             <p>
               Our key success factors are strategic focus, people, operations,
               marketing and finances. Depending on these factors we strive to be
@@ -51,11 +51,11 @@ const About = (props) => {
           </div>
           <div class='middle'>
             <span>icon</span>
-            <h2>Unique Approach</h2>
+            <h3>Unique Approach</h3>
           </div>
           <div class='bottom-one'>
             <span>icon</span>
-            <h2>The Why</h2>
+            <h3>The Why</h3>
             <p>
               Empower People Today to Build a Better Future for the Next
               Generation
@@ -63,7 +63,7 @@ const About = (props) => {
           </div>
           <div class='bottom-two'>
             <span>icon</span>
-            <h2>The Hows</h2>
+            <h3>The Hows</h3>
             <ul>
               <li>Do the right thing, the first time - Always</li>
               <li>Lead by example, follow ethically</li>
@@ -75,7 +75,7 @@ const About = (props) => {
           </div>
           <div class='bottom-three'>
             <span>icon</span>
-            <h2>The What's</h2>
+            <h3>The What's</h3>
             <ul>
               <li>Identify & invest in improvement & development</li>
               <li>Delight our customers</li>
@@ -86,7 +86,7 @@ const About = (props) => {
           </div>
           <div class='bottom-four'>
             <span>icon</span>
-            <h2>Core Values</h2>
+            <h3>Core Values</h3>
             <ul>
               <li>Commitment to customers above all else</li>
               <li>We can generate profit without acting unethically</li>
@@ -135,6 +135,8 @@ const Wrapper = styled.main`
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: auto;
       gap: 0px 0px;
+      align-items: center;
+      justify-items: center;
       grid-template-areas:
         'top top top top'
         'left-big left-big right-big right-big'
@@ -144,14 +146,17 @@ const Wrapper = styled.main`
 
     .top {
       grid-area: top;
+      margin: 0.5em 5em;
     }
 
     .left-big {
       grid-area: left-big;
+      margin: 0.5em 5em;
     }
 
     .right-big {
       grid-area: right-big;
+      margin: 0.5em 5em;
     }
 
     .middle {
@@ -160,18 +165,22 @@ const Wrapper = styled.main`
 
     .bottom-one {
       grid-area: bottom-one;
+      margin: 0.5em 1em 0.5em 5rem;
     }
 
     .bottom-two {
       grid-area: bottom-two;
+      margin: 0.5em 1em 0.5em 0.5rem;
     }
 
     .bottom-three {
       grid-area: bottom-three;
+      margin: 0.5em 1em 0.5em 0.5rem;
     }
 
     .bottom-four {
       grid-area: bottom-four;
+      margin: 0.5em 5em 0.5em 1rem;
     }
 
     h1 {
