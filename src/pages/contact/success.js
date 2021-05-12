@@ -45,31 +45,7 @@ const Contact = (props) => {
             </p>
           </div>
           <div className='form-box'>
-            <form
-              name='contact'
-              method='POST'
-              data-netlify='true'
-              action='/success'
-            >
-              <p>
-                <label>
-                  Your Name: <input type='text' name='name' />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Your Email: <input type='email' name='email' />
-                </label>
-              </p>
-              <p>
-                <label>
-                  Message: <textarea rows='5' name='message'></textarea>
-                </label>
-              </p>
-              <p>
-                <button type='submit'>Send</button>
-              </p>
-            </form>
+            <h4>Thank you! Your message has been sent.</h4>
           </div>
         </div>
       </Wrapper>
@@ -82,7 +58,6 @@ const Wrapper = styled.main`
   min-height: calc(100vh - 5rem);
   display: grid;
   place-items: center;
-
   a {
     color: var(--clr-grey-1);
   }
@@ -97,21 +72,6 @@ const Wrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    button {
-      cursor: pointer;
-      background-color: var(--clr-grey-1);
-      color: var(--clr-white);
-      border: 0;
-      padding: 1em;
-    }
-    .form-box {
-      input,
-      textarea {
-      }
-      p {
-        margin: 0.2em;
-      }
-    }
   }
   @media (min-width: 800px) {
     h1 {
