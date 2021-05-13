@@ -12,8 +12,9 @@ const About = (props) => {
         <SEO title='About Us' />
         <div class='grid-container'>
           <div class='top'>
-            <span>Icon</span>
-            <h3>Director: Johnny Coleman</h3>
+            <h3>
+              Director: <strong>Johnny Coleman</strong>
+            </h3>
             <p>
               Coleman Traders (Pty) Ltd was registered in 2016, focusing on
               selling containers and plant hire/sales. Since the economy took
@@ -26,8 +27,9 @@ const About = (props) => {
             </p>
           </div>
           <div class='left-big'>
-            <span>icon</span>
-            <h3>Our Mission</h3>
+            <h3>
+              Our <strong>Mission</strong>
+            </h3>
             <p>
               Coleman Traders (Pty) Ltd is dedicated to delivering effective,
               efficient, respectful services with integrity and accountability
@@ -40,8 +42,9 @@ const About = (props) => {
             </p>
           </div>
           <div class='right-big'>
-            <span>icon</span>
-            <h3>Our Vision</h3>
+            <h3>
+              Our <strong>Vision</strong>
+            </h3>
             <p>
               Our key success factors are strategic focus, people, operations,
               marketing and finances. Depending on these factors we strive to be
@@ -50,8 +53,9 @@ const About = (props) => {
             </p>
           </div>
           <div class='middle'>
-            <span>icon</span>
-            <h3>Core Values</h3>
+            <h3>
+              Core <strong>Values</strong>
+            </h3>
             <ul>
               <li>Commitment to customers above all else</li>
               <li>We can generate profit without acting unethically</li>
@@ -64,15 +68,19 @@ const About = (props) => {
           </div>
           <div className='bottom'>
             <div className='flex-row'>
-              <div>
-                <h3>The Why</h3>
+              <div class='bottom-blocks'>
+                <h3>
+                  The <strong>Why</strong>
+                </h3>
                 <p>
                   Empower People Today to Build a Better Future for the Next
                   Generation
                 </p>
               </div>
-              <div>
-                <h3>The Hows</h3>
+              <div class='bottom-blocks'>
+                <h3>
+                  The <strong>Hows</strong>
+                </h3>
                 <ul>
                   <li>Do the right thing, the first time - Always</li>
                   <li>Lead by example, follow ethically</li>
@@ -82,8 +90,10 @@ const About = (props) => {
                   <li>Do it all in the spirit of Coleman Traders</li>
                 </ul>
               </div>
-              <div>
-                <h3>The What's</h3>
+              <div class='bottom-blocks'>
+                <h3>
+                  The <strong>What's</strong>
+                </h3>
                 <ul>
                   <li>Identify & invest in improvement & development</li>
                   <li>Delight our customers</li>
@@ -94,50 +104,6 @@ const About = (props) => {
               </div>
             </div>
           </div>
-          {/* <div class='bottom-one'>
-            <span>icon</span>
-            <h3>The Why</h3>
-            <p>
-              Empower People Today to Build a Better Future for the Next
-              Generation
-            </p>
-          </div>
-          <div class='bottom-two'>
-            <span>icon</span>
-            <h3>The Hows</h3>
-            <ul>
-              <li>Do the right thing, the first time - Always</li>
-              <li>Lead by example, follow ethically</li>
-              <li>Bring out the best in everyone</li>
-              <li>Make them enquire again</li>
-              <li>Embrace transparency</li>
-              <li>Do it all in the spirit of Coleman Traders</li>
-            </ul>
-          </div>
-          <div class='bottom-three'>
-            <span>icon</span>
-            <h3>The What's</h3>
-            <ul>
-              <li>Identify & invest in improvement & development</li>
-              <li>Delight our customers</li>
-              <li>Honour our commitments</li>
-              <li>Incorporate new technology</li>
-              <li>Improve financial security</li>
-            </ul>
-          </div>
-          <div class='bottom-four'>
-            <span>icon</span>
-            <h3>Core Values</h3>
-            <ul>
-              <li>Commitment to customers above all else</li>
-              <li>We can generate profit without acting unethically</li>
-              <li>Great just isn’t good enough</li>
-              <li>Connect with transparency, dignity and respect</li>
-              <li>Act with courage</li>
-              <li>Awareness of social and physical environment</li>
-              <li>We look beyond the present to deliver future value</li>
-            </ul>
-          </div> */}
         </div>
       </Wrapper>
     </Layout>
@@ -202,6 +168,12 @@ const Wrapper = styled.main`
 
     .middle {
       grid-area: middle;
+      margin: 2em 0;
+      ul {
+        margin: 0.5em 0;
+        text-align: left;
+        list-style: circle;
+      }
     }
 
     .bottom {
@@ -210,28 +182,17 @@ const Wrapper = styled.main`
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        .bottom-blocks {
+          margin: 0.5em 2em;
+        }
+        ul,
+        p {
+          text-align: left;
+          margin: 0.5em 0;
+          list-style: circle;
+        }
       }
     }
-
-    /* .bottom-one {
-      grid-area: bottom-one;
-      margin: 0.5em 1em 0.5em 5rem;
-    }
-
-    .bottom-two {
-      grid-area: bottom-two;
-      margin: 0.5em 1em 0.5em 0.5rem;
-    }
-
-    .bottom-three {
-      grid-area: bottom-three;
-      margin: 0.5em 1em 0.5em 0.5rem;
-    }
-
-    .bottom-four {
-      grid-area: bottom-four;
-      margin: 0.5em 5em 0.5em 1rem;
-    } */
 
     h1 {
       margin-top: 2rem;
