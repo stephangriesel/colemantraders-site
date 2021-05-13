@@ -12,7 +12,9 @@ const Fuel = (props) => {
       <Wrapper>
         <SEO title='Fuel Services' />
         <div className='info-box'>
-          <h2>Fuel Wholesale Services</h2>
+          <h2>
+            Fuel Wholesale <strong>Services</strong>
+          </h2>
           <p>
             Focusing on 40 000l best quality product deliveries at a time, we
             are enabled and driven to provide 100% reliable personal service due

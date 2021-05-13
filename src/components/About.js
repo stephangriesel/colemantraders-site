@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 const About = () => {
   return (
     <Wrapper className='section'>
-      <Title title='About Us' />
+      {/* <Title title='Services' /> */}
       <div className='section-center'>
         {services.map(({ id, icon, label, text }) => {
           return (

@@ -12,7 +12,9 @@ const Contact = (props) => {
         <SEO title='Contact' />
         <div className='contact-wrapper'>
           <div className='info-box'>
-            {/* <h1>{path}</h1> */}
+            <h2>
+              Contact <strong>Us</strong>
+            </h2>
             <p>
               368 Main Street, Waterkloof, Pretoria, 0145
               <ul>
@@ -112,6 +114,11 @@ const Wrapper = styled.main`
         margin: 0.2em;
       }
     }
+    .info-box {
+      h2 {
+        /* margin-top: 2.5em; */
+      }
+    }
   }
   @media (min-width: 800px) {
     h1 {
@@ -123,6 +130,10 @@ const Wrapper = styled.main`
       flex-direction: row;
       .info-box {
         width: 25em;
+
+        h2 {
+          margin: 1em 0;
+        }
       }
       .form-box {
         width: 25em;

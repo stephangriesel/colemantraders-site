@@ -12,7 +12,9 @@ const Hire = (props) => {
       <Wrapper>
         <SEO title='Plant Hire' />
         <div className='info-box'>
-          <h2>Plant Hire</h2>
+          <h2>
+            Plant <strong>Hire</strong>
+          </h2>
           <p>
             With over 10 years of experience, Coleman Traders (Pty) Ltd can
             confidently offer innovative solutions for any construction and

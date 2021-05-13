@@ -12,7 +12,9 @@ const Container = (props) => {
       <Wrapper>
         <SEO title='Container Services' />
         <div className='info-box'>
-          <h2>Container Services</h2>
+          <h2>
+            Container <strong>Services</strong>
+          </h2>
           <p>
             Coleman Traders (Pty) Ltd can assist you with the right solutions to
             fulfil your container needs. Our cost-effective rates is one of the
