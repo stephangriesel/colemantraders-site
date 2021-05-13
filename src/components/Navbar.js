@@ -21,7 +21,10 @@ const Navbar = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           <Link to='/'>
-            <img src={logo} alt='logo'></img>
+            <h2>
+              <strong>COLEMAN</strong>
+              Traders
+            </h2>
           </Link>
           {!isSidebarOpen && (
             <button className='toggle-btn' onClick={showSidebar}>
@@ -52,6 +55,9 @@ const Wrapper = styled.nav`
     max-width: var(--max-width);
   }
   .nav-header {
+    h2 {
+      color: var(--clr-white);
+    }
     color: var(--clr-grey-1);
     display: flex;
     align-items: center;
