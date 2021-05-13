@@ -51,9 +51,50 @@ const About = (props) => {
           </div>
           <div class='middle'>
             <span>icon</span>
-            <h3>Unique Approach</h3>
+            <h3>Core Values</h3>
+            <ul>
+              <li>Commitment to customers above all else</li>
+              <li>We can generate profit without acting unethically</li>
+              <li>Great just isn’t good enough</li>
+              <li>Connect with transparency, dignity and respect</li>
+              <li>Act with courage</li>
+              <li>Awareness of social and physical environment</li>
+              <li>We look beyond the present to deliver future value</li>
+            </ul>
           </div>
-          <div class='bottom-one'>
+          <div className='bottom'>
+            <div className='flex-row'>
+              <div>
+                <h3>The Why</h3>
+                <p>
+                  Empower People Today to Build a Better Future for the Next
+                  Generation
+                </p>
+              </div>
+              <div>
+                <h3>The Hows</h3>
+                <ul>
+                  <li>Do the right thing, the first time - Always</li>
+                  <li>Lead by example, follow ethically</li>
+                  <li>Bring out the best in everyone</li>
+                  <li>Make them enquire again</li>
+                  <li>Embrace transparency</li>
+                  <li>Do it all in the spirit of Coleman Traders</li>
+                </ul>
+              </div>
+              <div>
+                <h3>The What's</h3>
+                <ul>
+                  <li>Identify & invest in improvement & development</li>
+                  <li>Delight our customers</li>
+                  <li>Honour our commitments</li>
+                  <li>Incorporate new technology</li>
+                  <li>Improve financial security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* <div class='bottom-one'>
             <span>icon</span>
             <h3>The Why</h3>
             <p>
@@ -96,7 +137,7 @@ const About = (props) => {
               <li>Awareness of social and physical environment</li>
               <li>We look beyond the present to deliver future value</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </Wrapper>
     </Layout>
@@ -141,7 +182,7 @@ const Wrapper = styled.main`
         'top top top top'
         'left-big left-big right-big right-big'
         'middle middle middle middle'
-        'bottom-one bottom-two bottom-three bottom-four';
+        'bottom bottom bottom bottom';
     }
 
     .top {
@@ -163,7 +204,16 @@ const Wrapper = styled.main`
       grid-area: middle;
     }
 
-    .bottom-one {
+    .bottom {
+      grid-area: bottom;
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+
+    /* .bottom-one {
       grid-area: bottom-one;
       margin: 0.5em 1em 0.5em 5rem;
     }
@@ -181,7 +231,7 @@ const Wrapper = styled.main`
     .bottom-four {
       grid-area: bottom-four;
       margin: 0.5em 5em 0.5em 1rem;
-    }
+    } */
 
     h1 {
       margin-top: 2rem;
