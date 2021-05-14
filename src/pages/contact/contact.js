@@ -15,7 +15,7 @@ const Contact = (props) => {
             <h2>
               Contact <strong>Us</strong>
             </h2>
-            <p>
+            <div>
               368 Main Street, Waterkloof, Pretoria, 0145
               <ul>
                 <li>Office: 012 997 1801</li>
@@ -44,7 +44,7 @@ const Contact = (props) => {
                   : 074 158 7642
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
           <div className='form-box'>
             <form
@@ -55,17 +55,20 @@ const Contact = (props) => {
             >
               <p>
                 <label>
-                  Your Name: <input type='text' name='name' />
+                  Your Name: <br />
+                  <input type='text' name='name' />
                 </label>
               </p>
               <p>
                 <label>
-                  Your Email: <input type='email' name='email' />
+                  Your Email: <br />
+                  <input type='email' name='email' />
                 </label>
               </p>
               <p>
                 <label>
-                  Message: <textarea rows='5' name='message'></textarea>
+                  Message: <br />
+                  <textarea rows='5' name='message'></textarea>
                 </label>
               </p>
               <p>
@@ -109,6 +112,8 @@ const Wrapper = styled.main`
     .form-box {
       input,
       textarea {
+        padding: 1em;
+        margin: 0.5em;
       }
       p {
         margin: 0.2em;

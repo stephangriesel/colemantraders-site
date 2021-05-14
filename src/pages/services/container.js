@@ -42,7 +42,7 @@ const Container = (props) => {
               alt='container'
               height={400}
               placeholder='dominantColor'
-              className='img-box-inner'
+              className='img-box-inner fade-in'
             />
           </div>
         </div>
@@ -74,7 +74,7 @@ const Wrapper = styled.main`
     }
   }
   .image-box {
-    margin-top: 1em;
+    margin: 1em 1em;
     .img-box-inner {
       /* border: var(--clr-grey-1) solid 1px; */
       border-radius: 1rem;
@@ -89,6 +89,22 @@ const Wrapper = styled.main`
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
+
+  // Animations
+
+  .fade-in {
+    animation: fadeIn ease 2s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media (min-width: 800px) {
     display: flex;
     flex-direction: row;

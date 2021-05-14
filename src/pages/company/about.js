@@ -10,8 +10,8 @@ const About = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
-        <div class='grid-container'>
-          <div class='top'>
+        <div className='grid-container'>
+          <div className='top'>
             <h3>
               Director: <strong>Johnny Coleman</strong>
             </h3>
@@ -26,7 +26,7 @@ const About = (props) => {
               reputation.
             </p>
           </div>
-          <div class='left-big'>
+          <div className='left-big'>
             <h3>
               Our <strong>Mission</strong>
             </h3>
@@ -41,7 +41,7 @@ const About = (props) => {
               responsibilities.
             </p>
           </div>
-          <div class='right-big'>
+          <div className='right-big'>
             <h3>
               Our <strong>Vision</strong>
             </h3>
@@ -52,7 +52,7 @@ const About = (props) => {
               distributing company in South Africa.
             </p>
           </div>
-          <div class='middle'>
+          <div className='middle'>
             <h3>
               Core <strong>Values</strong>
             </h3>
@@ -68,7 +68,7 @@ const About = (props) => {
           </div>
           <div className='bottom'>
             <div className='flex-row'>
-              <div class='bottom-blocks'>
+              <div className='bottom-blocks'>
                 <h3>
                   The <strong>Why</strong>
                 </h3>
@@ -77,7 +77,7 @@ const About = (props) => {
                   Generation
                 </p>
               </div>
-              <div class='bottom-blocks'>
+              <div className='bottom-blocks'>
                 <h3>
                   The <strong>Hows</strong>
                 </h3>
@@ -90,7 +90,7 @@ const About = (props) => {
                   <li>Do it all in the spirit of Coleman Traders</li>
                 </ul>
               </div>
-              <div class='bottom-blocks'>
+              <div className='bottom-blocks'>
                 <h3>
                   The <strong>What's</strong>
                 </h3>
