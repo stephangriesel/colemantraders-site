@@ -36,12 +36,15 @@ const Container = (props) => {
           </Link> */}
         </div>
         <div className='image-box'>
-          <StaticImage
-            src='https://res.cloudinary.com/dvme554nj/image/upload/v1620105823/coleman/container_hpi8zy.jpg'
-            alt='container'
-            height={400}
-            placeholder='dominantColor'
-          />
+          <div className='img-box-outer'>
+            <StaticImage
+              src='https://res.cloudinary.com/dvme554nj/image/upload/v1620105823/coleman/container_hpi8zy.jpg'
+              alt='container'
+              height={400}
+              placeholder='dominantColor'
+              className='img-box-inner'
+            />
+          </div>
         </div>
       </Wrapper>
     </Layout>
@@ -66,13 +69,18 @@ const Wrapper = styled.main`
   }
   .image-box {
     margin-top: 1em;
+    .img-box-inner {
+      /* border: var(--clr-grey-1) solid 1px; */
+      border-radius: 1rem;
+      /* transform: rotate(-2deg); */
+      box-shadow: 10px 10px 5px grey;
+    }
   }
   div {
     text-align: center;
   }
   h1 {
     font-size: 2rem;
-    color: var(--clr-primary-5);
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {

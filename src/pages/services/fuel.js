@@ -58,6 +58,7 @@ const Fuel = (props) => {
             alt='fuel'
             height={400}
             placeholder='dominantColor'
+            className='img-box-inner'
           />
         </div>
       </Wrapper>
@@ -93,7 +94,6 @@ const Wrapper = styled.main`
   }
   h1 {
     font-size: 2rem;
-    color: var(--clr-primary-5);
     margin-bottom: 1.5rem;
   }
   @media (min-width: 800px) {
@@ -123,6 +123,12 @@ const Wrapper = styled.main`
     }
     .image-box {
       margin-top: 0;
+      .img-box-inner {
+        /* border: var(--clr-grey-1) solid 1px; */
+        border-radius: 1rem;
+        /* transform: rotate(-2deg); */
+        box-shadow: 10px 10px 5px grey;
+      }
     }
   }
 `;
