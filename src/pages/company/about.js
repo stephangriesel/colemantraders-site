@@ -125,6 +125,17 @@ const Wrapper = styled.main`
     flex-direction: column;
     padding-top: 7rem;
   }
+  .bottom {
+    .flex-row {
+      .bottom-blocks {
+        margin: 1em 0;
+      }
+      ul,
+      p {
+        margin: 1em 2em;
+      }
+    }
+  }
 
   div {
     text-align: center;

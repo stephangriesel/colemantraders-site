@@ -1,12 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from './Title';
 import services from '../constants/services';
-import { Link } from 'gatsby';
 const About = () => {
   return (
     <Wrapper className='section'>
-      {/* <Title title='Services' /> */}
       <div className='section-center'>
         {services.map(({ id, icon, label, text }) => {
           return (
