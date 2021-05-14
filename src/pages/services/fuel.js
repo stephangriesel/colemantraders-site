@@ -30,9 +30,7 @@ const Fuel = (props) => {
           <div className='info-double'>
             <div className='info-double-left'>
               <ul>
-                <span>
-                  <strong>Products include:</strong>
-                </span>
+                <span>{/* <strong>Products include:</strong> */}</span>
                 <li>Diesel 50ppm</li>
                 <li>Illuminating Paraffin</li>
                 <li>FOL</li>
@@ -77,6 +75,12 @@ const Wrapper = styled.main`
   .info-box {
     width: 30em;
     margin: 3em;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: circle;
+    }
     h1,
     p {
       margin-top: 2rem;

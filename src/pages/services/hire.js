@@ -27,10 +27,7 @@ const Hire = (props) => {
             breakdowns.
           </p>
           <ul>
-            <li>
-              Yellow machinery (Rollers, Graders, Excavators, TLB’s, ADT’s,
-              Front End Loaders, etc.)
-            </li>
+            <li>Yellow machinery</li>
             <li>Water trucks</li>
             <li>Tipper trucks</li>
             <li>Forklifts</li>
@@ -64,6 +61,12 @@ const Wrapper = styled.main`
   .info-box {
     width: 30em;
     margin: 3em;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: circle;
+    }
     h1,
     p {
       margin-top: 2rem;

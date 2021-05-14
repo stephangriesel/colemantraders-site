@@ -62,6 +62,12 @@ const Wrapper = styled.main`
   .info-box {
     width: 30em;
     margin: 3em;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: circle;
+    }
     h1,
     p {
       margin-top: 2rem;
