@@ -124,17 +124,16 @@ const Wrapper = styled.main`
   @media (min-width: 800px) {
     display: flex;
     flex-direction: row;
-    .info-box {
-        p {
-          /* margin-top: 0; */
-        }
-      }
-    }
     h1 {
       font-size: 4rem;
     }
     .image-box {
-      /* margin-top: 0; */
+      margin-top: 2em;
+    }
+    .info-box {
+      p {
+        margin-top: 2em;
+      }
     }
   }
 `;
