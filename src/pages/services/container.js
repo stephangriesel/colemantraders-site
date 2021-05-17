@@ -31,9 +31,6 @@ const Container = (props) => {
             <li>6m/12m storage containers</li>
             <li>Transportation</li>
           </ul>
-          {/* <Link to='/' className='btn'>
-            Container
-          </Link> */}
         </div>
         <div className='image-box'>
           <div className='img-box-outer'>
@@ -65,12 +62,15 @@ const Wrapper = styled.main`
     ul {
       display: flex;
       flex-direction: column;
-      align-items: center;
       list-style: circle;
+      margin: 1em 3em;
     }
-    h1,
+    li {
+      text-align: left;
+    }
     p {
-      margin-top: 2rem;
+      margin: 2rem;
+      text-align: left;
     }
   }
   .image-box {

@@ -13,7 +13,7 @@ const Fuel = (props) => {
         <SEO title='Fuel Services' />
         <div className='info-box'>
           <h2>
-            Fuel Wholesale <strong>Services</strong>
+            Fuel <strong>Services</strong>
           </h2>
           <p>
             Focusing on 40 000l best quality product deliveries at a time, we
@@ -27,28 +27,20 @@ const Fuel = (props) => {
             environmental, safety and legislative factors and procedures.
             Deliveries are based all over South Africa.
           </p>
-          <div className='info-double'>
-            <div className='info-double-left'>
-              <ul>
-                <span>{/* <strong>Products include:</strong> */}</span>
-                <li>Diesel 50ppm</li>
-                <li>Illuminating Paraffin</li>
-                <li>FOL</li>
-                <li>Petrol</li>
-                <li>LSR</li>
-                <li>Fluorine Gas</li>
-                <li>LP Gas</li>
-              </ul>
-            </div>
-            <div className='info-double-right'>
-              <p>
-                Our products and services are not limited. We also sell brand
-                new and rebuilt tanks according to your requirements delivered
-                to your site. This will include all accessories and equipment as
-                per demand.
-              </p>
-            </div>
-          </div>
+          <ul>
+            <li>Diesel 50ppm</li>
+            <li>Illuminating Paraffin</li>
+            <li>FOL</li>
+            <li>Petrol</li>
+            <li>LSR</li>
+            <li>Fluorine Gas</li>
+            <li>LP Gas</li>
+          </ul>
+          <p>
+            Our products and services are not limited. We also sell brand new
+            and rebuilt tanks according to your requirements delivered to your
+            site. This will include all accessories and equipment as per demand.
+          </p>
         </div>
         <div className='image-box'>
           <StaticImage
@@ -78,12 +70,16 @@ const Wrapper = styled.main`
     ul {
       display: flex;
       flex-direction: column;
-      align-items: center;
       list-style: circle;
+      margin: 1em 3em;
+    }
+    li {
+      text-align: left;
     }
     h1,
     p {
-      margin-top: 2rem;
+      text-align: left;
+      margin: 2em;
     }
     .info-double {
       display: flex;
@@ -97,6 +93,10 @@ const Wrapper = styled.main`
       border-radius: 1rem;
       /* transform: rotate(-2deg); */
       box-shadow: 10px 10px 5px grey;
+    }
+
+    p {
+      margin: 2em 1em;
     }
   }
   div {
@@ -125,21 +125,8 @@ const Wrapper = styled.main`
     display: flex;
     flex-direction: row;
     .info-box {
-      .info-double {
-        display: flex;
-        flex-direction: row;
-        margin: 2em 0;
-        align-items: center;
-        .info-double-left,
-        .info-double-right {
-          background: var(--clr-grey-2);
-          width: 50%;
-          padding: 0.5em;
-          margin: 0.5em;
-          border-radius: 0.5em;
-        }
         p {
-          margin-top: 0;
+          /* margin-top: 0; */
         }
       }
     }
@@ -147,7 +134,7 @@ const Wrapper = styled.main`
       font-size: 4rem;
     }
     .image-box {
-      margin-top: 0;
+      /* margin-top: 0; */
     }
   }
 `;

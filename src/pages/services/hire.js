@@ -60,16 +60,20 @@ const Wrapper = styled.main`
   justify-content: center;
   .info-box {
     width: 30em;
-    margin: 3em;
+    margin: 3em 3em;
     ul {
       display: flex;
       flex-direction: column;
-      align-items: center;
       list-style: circle;
+      margin: 1em 3em;
+    }
+    li {
+      text-align: left;
     }
     h1,
     p {
-      margin-top: 2rem;
+      margin: 2em 2em;
+      text-align: left;
     }
   }
   .image-box {
