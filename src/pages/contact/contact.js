@@ -112,6 +112,7 @@ const Wrapper = styled.main`
     .form-box {
       input,
       textarea {
+        width: 85%;
         padding: 1em;
         margin: 0.5em;
       }
