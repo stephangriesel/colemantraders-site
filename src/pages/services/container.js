@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+const accordionData = {
+  title: 'More Specifications',
+  content_one: `Ablution Blocks`,
+  content_two: `6m/12m Office blocks`,
+  content_three: `6m/12m storage containers`,
+  content_four: `Transportation`,
+};
+
+const {
+  title,
+  content_one,
+  content_two,
+  content_three,
+  content_four,
+} = accordionData;
+
 const Container = (props) => {
   const path = props.location.pathname.slice(1);
+  const [isActive, setIsActive] = useState(false);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
@@ -25,12 +42,27 @@ const Container = (props) => {
             safety procedures and awareness. Our equipment, drivers and crane
             operators are certified at highly recommended testing facilities.
           </p>
-          <ul>
-            <li>Ablution Blocks</li>
-            <li>6m/12m Office blocks</li>
-            <li>6m/12m storage containers</li>
-            <li>Transportation</li>
-          </ul>
+          <div className='accordion'>
+            <div className='accordion-item'>
+              <div
+                className='accordion-title'
+                onClick={() => setIsActive(!isActive)}
+              >
+                <div>{title}</div>
+                <div>{isActive ? '-' : '+'}</div>
+              </div>
+              {isActive && (
+                <div className='accordion-content'>
+                  <ul>
+                    <li>{content_one}</li>
+                    <li>{content_two}</li>
+                    <li>{content_three}</li>
+                    <li>{content_four}</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
         <div className='image-box'>
           <div className='img-box-outer'>
@@ -62,8 +94,8 @@ const Wrapper = styled.main`
     ul {
       display: flex;
       flex-direction: column;
-      list-style: circle;
-      margin: 1em 3em;
+      /* list-style: circle;
+      margin: 1em 3em; */
     }
     li {
       text-align: left;
@@ -71,6 +103,38 @@ const Wrapper = styled.main`
     p {
       margin: 2rem;
       text-align: left;
+    }
+
+    .accordion {
+      /* display: flex;
+      flex-direction: column; */
+      max-width: 90%;
+      margin: 2rem auto;
+      transition: ease-in-out 1s;
+      .accordion-content {
+        padding: 1rem;
+      }
+      .accordion-content {
+        border-bottom: 1px solid #929292;
+        border-right: 1px solid #929292;
+        border-left: 1px solid #929292;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: ease-in-out 1s;
+      }
+      .accordion-title {
+        color: var(--clr-white);
+        transition: ease-in-out 0.5s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        background: var(--clr-grey-1);
+        padding: 1rem;
+        &:hover {
+          background-color: #929292;
+        }
+      }
     }
   }
   .image-box {
