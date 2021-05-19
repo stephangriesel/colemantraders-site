@@ -94,8 +94,8 @@ const Wrapper = styled.main`
     ul {
       display: flex;
       flex-direction: column;
-      /* list-style: circle;
-      margin: 1em 3em; */
+      list-style: circle;
+      margin: 1em 3em;
     }
     li {
       text-align: left;
@@ -106,8 +106,6 @@ const Wrapper = styled.main`
     }
 
     .accordion {
-      /* display: flex;
-      flex-direction: column; */
       max-width: 90%;
       margin: 2rem auto;
       transition: ease-in-out 1s;
@@ -132,7 +130,7 @@ const Wrapper = styled.main`
         background: var(--clr-grey-1);
         padding: 1rem;
         &:hover {
-          background-color: #929292;
+          background-color: var(--clr-grey-1);
         }
       }
     }

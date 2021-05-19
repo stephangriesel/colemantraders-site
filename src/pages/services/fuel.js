@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+const accordionData = {
+  title: 'More Specifications',
+  content_one: `Diesel 50ppm`,
+  content_two: `Illuminating Paraffin`,
+  content_three: `FOL`,
+  content_four: `Petrol`,
+  content_five: `LSR`,
+  content_six: `Fluorine Gas`,
+  content_seven: `LP Gas`,
+};
+
+const {
+  title,
+  content_one,
+  content_two,
+  content_three,
+  content_four,
+  content_five,
+  content_six,
+  content_seven,
+} = accordionData;
+
 const Fuel = (props) => {
   const path = props.location.pathname.slice(1);
+  const [isActive, setIsActive] = useState(false);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
@@ -27,15 +50,30 @@ const Fuel = (props) => {
             environmental, safety and legislative factors and procedures.
             Deliveries are based all over South Africa.
           </p>
-          <ul>
-            <li>Diesel 50ppm</li>
-            <li>Illuminating Paraffin</li>
-            <li>FOL</li>
-            <li>Petrol</li>
-            <li>LSR</li>
-            <li>Fluorine Gas</li>
-            <li>LP Gas</li>
-          </ul>
+          <div className='accordion'>
+            <div className='accordion-item'>
+              <div
+                className='accordion-title'
+                onClick={() => setIsActive(!isActive)}
+              >
+                <div>{title}</div>
+                <div>{isActive ? '-' : '+'}</div>
+              </div>
+              {isActive && (
+                <div className='accordion-content'>
+                  <ul>
+                    <li>{content_one}</li>
+                    <li>{content_two}</li>
+                    <li>{content_three}</li>
+                    <li>{content_four}</li>
+                    <li>{content_five}</li>
+                    <li>{content_six}</li>
+                    <li>{content_seven}</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
           <p>
             Our products and services are not limited. We also sell brand new
             and rebuilt tanks according to your requirements delivered to your
@@ -81,9 +119,35 @@ const Wrapper = styled.main`
       text-align: left;
       margin: 2em;
     }
-    .info-double {
-      display: flex;
-      flex-direction: column;
+
+    .accordion {
+      max-width: 90%;
+      margin: 2rem auto;
+      transition: ease-in-out 1s;
+      .accordion-content {
+        padding: 1rem;
+      }
+      .accordion-content {
+        border-bottom: 1px solid #929292;
+        border-right: 1px solid #929292;
+        border-left: 1px solid #929292;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: ease-in-out 1s;
+      }
+      .accordion-title {
+        color: var(--clr-white);
+        transition: ease-in-out 0.5s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        background: var(--clr-grey-1);
+        padding: 1rem;
+        &:hover {
+          background-color: var(--clr-grey-1);
+        }
+      }
     }
   }
   .image-box {

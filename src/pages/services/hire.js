@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Layout } from '../../components';
 import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+const accordionData = {
+  title: 'More Specifications',
+  content_one: `Yellow machinery`,
+  content_two: `Water trucks`,
+  content_three: `Tipper trucks`,
+  content_four: `Forklifts`,
+  content_five: `Generators`,
+  content_six: `Lowbed`,
+  content_seven: `Transportation services`,
+};
+
+const {
+  title,
+  content_one,
+  content_two,
+  content_three,
+  content_four,
+  content_five,
+  content_six,
+  content_seven,
+} = accordionData;
+
 const Hire = (props) => {
   const path = props.location.pathname.slice(1);
+  const [isActive, setIsActive] = useState(false);
   console.log('Sub Page Props:', props);
   return (
     <Layout>
@@ -26,15 +49,30 @@ const Hire = (props) => {
             tear items can be held on site for timeously recoveries on
             breakdowns.
           </p>
-          <ul>
-            <li>Yellow machinery</li>
-            <li>Water trucks</li>
-            <li>Tipper trucks</li>
-            <li>Forklifts</li>
-            <li>Generators</li>
-            <li>Lowbed</li>
-            <li>Transportation services</li>
-          </ul>
+          <div className='accordion'>
+            <div className='accordion-item'>
+              <div
+                className='accordion-title'
+                onClick={() => setIsActive(!isActive)}
+              >
+                <div>{title}</div>
+                <div>{isActive ? '-' : '+'}</div>
+              </div>
+              {isActive && (
+                <div className='accordion-content'>
+                  <ul>
+                    <li>{content_one}</li>
+                    <li>{content_two}</li>
+                    <li>{content_three}</li>
+                    <li>{content_four}</li>
+                    <li>{content_five}</li>
+                    <li>{content_six}</li>
+                    <li>{content_seven}</li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
         <div className='image-box'>
           <StaticImage
@@ -74,6 +112,36 @@ const Wrapper = styled.main`
     p {
       margin: 2em 2em;
       text-align: left;
+    }
+
+    .accordion {
+      max-width: 90%;
+      margin: 2rem auto;
+      transition: ease-in-out 1s;
+      .accordion-content {
+        padding: 1rem;
+      }
+      .accordion-content {
+        border-bottom: 1px solid #929292;
+        border-right: 1px solid #929292;
+        border-left: 1px solid #929292;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: ease-in-out 1s;
+      }
+      .accordion-title {
+        color: var(--clr-white);
+        transition: ease-in-out 0.5s;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        cursor: pointer;
+        background: var(--clr-grey-1);
+        padding: 1rem;
+        &:hover {
+          background-color: var(--clr-grey-1);
+        }
+      }
     }
   }
   .image-box {
