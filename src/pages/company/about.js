@@ -37,7 +37,7 @@ const About = (props) => {
                 </p>
               </div>
             </div>
-            <div className='two-column'>
+            <div className='two-column-alt'>
               <div className='txt-box'>
                 <h3>
                   Our <strong>Mission</strong>
@@ -85,7 +85,7 @@ const About = (props) => {
                 </p>
               </div>
             </div>
-            <div className='two-column'>
+            <div className='two-column-alt'>
               <div className='txt-box'>
                 <h3>
                   Core <strong>Values</strong>
@@ -130,7 +130,7 @@ const About = (props) => {
                 </p>
               </div>
             </div>
-            <div className='two-column'>
+            <div className='two-column-alt'>
               <div className='txt-box'>
                 <h3>
                   The <strong>Hows</strong>
@@ -189,7 +189,7 @@ const About = (props) => {
 const Wrapper = styled.main`
   min-height: calc(100vh - 5rem);
   margin-top: -5rem;
-  margin: 0 10em;
+  margin: 0 2em;
   .about-wrapper {
     margin-top: 3em;
     .image-block {
@@ -203,11 +203,13 @@ const Wrapper = styled.main`
       .img-box {
         text-align: center;
         margin: 2em;
+        width: 100%;
         .border-radius-50 {
           border-radius: 50%;
         }
       }
       .txt-box {
+        width: 100%;
         display: flex;
         align-items: center;
         p {
@@ -217,6 +219,25 @@ const Wrapper = styled.main`
     }
     .two-column {
       display: flex;
+      flex-direction: column;
+      .img-box {
+        width: 100%;
+      }
+      .txt-box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .two-column-alt {
+      display: flex;
+      flex-direction: column-reverse;
+      .img-box {
+        width: 100%;
+      }
+      .txt-box {
+        width: 100%;
+      }
     }
   }
 
@@ -232,11 +253,33 @@ const Wrapper = styled.main`
         display: flex;
         flex-direction: row;
         .img-box {
+          width: 50%;
           .border-radius-50 {
             border-radius: 50%;
           }
         }
         .txt-box {
+          width: 50%;
+        }
+      }
+      .two-column {
+        display: flex;
+        flex-direction: row;
+        .img-box {
+          width: 50%;
+        }
+        .txt-box {
+          width: 50%;
+        }
+      }
+      .two-column-alt {
+        display: flex;
+        flex-direction: row;
+        .img-box {
+          width: 50%;
+        }
+        .txt-box {
+          width: 50%;
         }
       }
     }
