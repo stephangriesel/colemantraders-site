@@ -55,8 +55,8 @@ const About = (props) => {
               </div>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
-                  alt='excavators'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
+                  alt='trucks'
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
@@ -66,8 +66,8 @@ const About = (props) => {
             <div className='two-column'>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
-                  alt='excavators'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572144/coleman/excavator_wzpmia.jpg'
+                  alt='aerial construction site'
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
@@ -102,7 +102,7 @@ const About = (props) => {
               </div>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572153/coleman/pexels-pixabay-461789_lih0jj.jpg'
                   alt='excavators'
                   placeholder='tracedSVG'
                   width={800}
@@ -113,7 +113,7 @@ const About = (props) => {
             <div className='two-column'>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572139/coleman/pexels-chanaka-906494_jd59pp.jpg'
                   alt='excavators'
                   placeholder='tracedSVG'
                   width={800}
@@ -146,7 +146,7 @@ const About = (props) => {
               </div>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572145/coleman/pexels-joseph-fuller-5578887_glotxr.jpg'
                   alt='excavators'
                   placeholder='tracedSVG'
                   width={800}
@@ -157,7 +157,7 @@ const About = (props) => {
             <div className='two-column'>
               <div className='img-box'>
                 <StaticImage
-                  src='../../images/company/director.png'
+                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-roger-brown-5125783_ndnh1x.jpg'
                   alt='excavators'
                   placeholder='tracedSVG'
                   width={800}
@@ -226,6 +226,13 @@ const Wrapper = styled.main`
         display: flex;
         flex-direction: column;
         margin: 2em 0;
+        h3 {
+          margin: 0.5rem 2rem;
+        }
+        p,
+        ul {
+          margin: 0 2rem;
+        }
       }
     }
     .two-column-alt {
@@ -239,6 +246,13 @@ const Wrapper = styled.main`
         display: flex;
         flex-direction: column;
         margin: 2em 0;
+        h3 {
+          margin: 0.5rem 2rem;
+        }
+        p,
+        ul {
+          margin: 0 2rem;
+        }
       }
     }
   }
