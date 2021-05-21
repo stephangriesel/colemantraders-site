@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import logo from '../images/logo.svg';
+import logo from '../images/logo2.png';
 import { GoThreeBars } from 'react-icons/go';
 import { Link } from 'gatsby';
 import NavLink from './NavLink';
@@ -21,10 +21,10 @@ const Navbar = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           <Link to='/'>
-            <h2>
-              <strong>COLEMAN</strong>
-              Traders
-            </h2>
+            <div className='logo'>
+              <img src={logo} />
+              {/* <h2>Coleman Traders</h2> */}
+            </div>
           </Link>
           {!isSidebarOpen && (
             <button className='toggle-btn' onClick={showSidebar}>
@@ -55,6 +55,20 @@ const Wrapper = styled.nav`
     max-width: var(--max-width);
   }
   .nav-header {
+    .logo {
+      display: flex;
+
+      img {
+        width: 6em;
+        height: 2em;
+      }
+      h2 {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+    }
     h2 {
       color: var(--clr-white);
     }
