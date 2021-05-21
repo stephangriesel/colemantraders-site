@@ -211,7 +211,7 @@ const Wrapper = styled.main`
       .txt-box {
         width: 100%;
         display: flex;
-        align-items: center;
+        align-self: center;
         p {
           margin: 1em 2em;
         }
@@ -226,7 +226,7 @@ const Wrapper = styled.main`
       .txt-box {
         width: 100%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
       }
     }
     .two-column-alt {
@@ -237,6 +237,8 @@ const Wrapper = styled.main`
       }
       .txt-box {
         width: 100%;
+        display: flex;
+        flex-direction: column;
       }
     }
   }
@@ -269,6 +271,8 @@ const Wrapper = styled.main`
           width: 50%;
         }
         .txt-box {
+          display: flex;
+          align-self: center;
           width: 50%;
         }
       }
@@ -279,6 +283,9 @@ const Wrapper = styled.main`
           width: 50%;
         }
         .txt-box {
+          display: flex;
+          align-self: center;
+          height: auto;
           width: 50%;
         }
       }
