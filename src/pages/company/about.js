@@ -212,9 +212,7 @@ const Wrapper = styled.main`
         width: 100%;
         display: flex;
         align-self: center;
-        p {
-          margin: 1em 2em;
-        }
+        margin: 2em;
       }
     }
     .two-column {
@@ -227,6 +225,7 @@ const Wrapper = styled.main`
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin: 2em 0;
       }
     }
     .two-column-alt {
@@ -239,6 +238,7 @@ const Wrapper = styled.main`
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin: 2em 0;
       }
     }
   }
