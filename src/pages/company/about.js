@@ -4,9 +4,33 @@ import styled from 'styled-components';
 import SEO from '../../components/seo';
 import { StaticImage } from 'gatsby-plugin-image';
 
+function useOnScreen(options) {
+  const [ref, setRef] = React.useState(null);
+  const [visible, setVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.isIntersecting);
+    }, options);
+
+    if (ref) {
+      observer.observe(ref);
+    }
+
+    return () => {
+      if (ref) {
+        observer.unobserve(ref);
+      }
+    };
+  }, [ref, options]);
+
+  return [setRef, visible];
+}
+
 const About = (props) => {
   // const path = props.location.pathname.slice(1);
   // console.log('Sub Page Props:', props);
+  const [setRef, visible] = useOnScreen({ threshold: 0.4 });
   return (
     <Layout>
       <Wrapper>
@@ -53,7 +77,11 @@ const About = (props) => {
                   and employee development responsibilities.
                 </p>
               </div>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
                   alt='trucks'
@@ -64,7 +92,11 @@ const About = (props) => {
               </div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572144/coleman/excavator_wzpmia.jpg'
                   alt='aerial construction site'
@@ -177,8 +209,7 @@ const About = (props) => {
                 </ul>
               </div>
             </div>
-            <div></div>
-            <div></div>
+            <div className='spacer'></div>
           </div>
         </div>
       </Wrapper>
@@ -197,11 +228,16 @@ const Wrapper = styled.main`
       /* position: relative; */
     }
     .top-box {
+      height: 80vh;
       background: rgba(255, 255, 255, 0.8);
       display: flex;
       flex-direction: column;
       .img-box {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
         margin: 2em;
         width: 100%;
         .border-radius-50 {
@@ -216,9 +252,15 @@ const Wrapper = styled.main`
       }
     }
     .two-column {
+      /* height: 100vh; */
       display: flex;
       flex-direction: column;
       .img-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
         width: 100%;
       }
       .txt-box {
@@ -236,9 +278,15 @@ const Wrapper = styled.main`
       }
     }
     .two-column-alt {
+      /* height: 100vh; */
       display: flex;
       flex-direction: column-reverse;
       .img-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
         width: 100%;
       }
       .txt-box {
@@ -255,6 +303,10 @@ const Wrapper = styled.main`
         }
       }
     }
+  }
+
+  .spacer {
+    margin: 5em 0;
   }
 
   @media (min-width: 800px) {
