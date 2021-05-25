@@ -9,8 +9,9 @@ function useOnScreen(options) {
   const [visible, setVisible] = React.useState(false);
 
   React.useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting);
+    const observer = new IntersectionObserver((entries) => {
+      // setVisible(entry.isIntersecting);
+      console.log('observe', entries);
     }, options);
 
     if (ref) {
@@ -132,7 +133,11 @@ const About = (props) => {
                   <li>We look beyond the present to deliver future value</li>
                 </ul>
               </div>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572153/coleman/pexels-pixabay-461789_lih0jj.jpg'
                   alt='excavators'
@@ -143,7 +148,11 @@ const About = (props) => {
               </div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572139/coleman/pexels-chanaka-906494_jd59pp.jpg'
                   alt='excavators'
@@ -176,7 +185,11 @@ const About = (props) => {
                   <li>Do it all in the spirit of Coleman Traders</li>
                 </ul>
               </div>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572145/coleman/pexels-joseph-fuller-5578887_glotxr.jpg'
                   alt='excavators'
@@ -187,7 +200,11 @@ const About = (props) => {
               </div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <div
+                className='img-box'
+                ref={setRef}
+                style={{ opacity: visible ? 1 : 0 }}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-roger-brown-5125783_ndnh1x.jpg'
                   alt='excavators'
