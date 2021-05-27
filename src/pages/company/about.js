@@ -7,7 +7,20 @@ import { motion } from 'framer-motion';
 import { useScroll } from '../../components/useScroll';
 import { fade } from '../../animation';
 
+// import { useInView } from 'react-intersection-observer';
+// import { useAnimation } from 'framer-motion';
+
 const About = (props) => {
+  const [element, controls] = useScroll();
+  // console.log('useinview', view);
+  // const [element, view] = useInView({ threshold: 0.2 });
+  // const controls = useAnimation();
+  // if (view) {
+  //   controls.start('show');
+  // } else {
+  //   controls.start('hidden');
+  // }
+
   const container = {
     hidden: {
       x: 5,
@@ -31,25 +44,21 @@ const About = (props) => {
     hidden: { opacity: 0, x: 50 },
     show: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeOut' } },
   };
-  const [element, controls] = useScroll();
   return (
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
         <motion.div
-          variants={container}
+          // variants={fade}
           initial='hidden'
-          animate='show'
+          // animate={controls}
           className='about-wrapper'
         >
           <div className='overlay'>
             <div className='top-box'>
               <motion.div
                 // variants={slideInRight}
-                initial='hidden'
-                animate='show'
                 className='img-box'
-                ref={element}
               >
                 <StaticImage
                   src='../../images/company/director.png'
@@ -93,19 +102,24 @@ const About = (props) => {
                   and employee development responsibilities.
                 </p>
               </div>
-              <div className='img-box' initial='hidden' ref={element}>
+              <motion.div
+                className='img-box'
+                variants={fade}
+                initial='show'
+                ref={element}
+                animate={controls}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
                   alt='trucks'
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
-                  ref={element}
                 ></StaticImage>
-              </div>
+              </motion.div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <motion.div className='img-box' variants={fade} initial='show'>
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572144/coleman/excavator_wzpmia.jpg'
                   alt='aerial construction site'
@@ -113,7 +127,7 @@ const About = (props) => {
                   width={800}
                   className='border-radius-50'
                 ></StaticImage>
-              </div>
+              </motion.div>
               <div className='txt-box'>
                 <h3>
                   Our <strong>Vision</strong>
@@ -192,6 +206,7 @@ const About = (props) => {
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
+                  ref={element}
                 ></StaticImage>
               </div>
             </div>
@@ -203,6 +218,7 @@ const About = (props) => {
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
+                  ref={element}
                 ></StaticImage>
               </div>
               <div className='txt-box'>
@@ -226,9 +242,7 @@ const About = (props) => {
   );
 };
 
-const OverlayWrap = styled.div``;
-
-const Wrapper = styled.main`
+const Wrapper = styled(motion.main)`
   min-height: calc(100vh - 5rem);
   margin-top: -5rem;
   margin: 0 2em;
