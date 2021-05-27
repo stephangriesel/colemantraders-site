@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../animation';
+
 const accordionData = {
   title: 'More Specifications',
   content_one: `Ablution Blocks`,
@@ -28,7 +31,13 @@ const Container = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='Container Services' />
-        <div className='info-box'>
+        <motion.div
+          exit='exit'
+          variants={pageAnimation}
+          initial='hidden'
+          animate='show'
+          className='info-box'
+        >
           <h2>
             Container <strong>Services</strong>
           </h2>
@@ -63,7 +72,7 @@ const Container = (props) => {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className='image-box'>
           <div className='img-box-outer'>
             <StaticImage
@@ -80,7 +89,7 @@ const Container = (props) => {
   );
 };
 
-const Wrapper = styled.main`
+const Wrapper = styled(motion.main)`
   margin-top: -5rem;
   min-height: calc(100vh - 5rem);
   display: flex;

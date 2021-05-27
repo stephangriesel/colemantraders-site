@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../animation';
+
 const accordionData = {
   title: 'More Specifications',
   content_one: `Diesel 50ppm`,
@@ -34,7 +37,13 @@ const Fuel = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='Fuel Services' />
-        <div className='info-box'>
+        <motion.div
+          exit='exit'
+          variants={pageAnimation}
+          initial='hidden'
+          animate='show'
+          className='info-box'
+        >
           <h2>
             Fuel <strong>Services</strong>
           </h2>
@@ -79,7 +88,7 @@ const Fuel = (props) => {
             and rebuilt tanks according to your requirements delivered to your
             site. This will include all accessories and equipment as per demand.
           </p>
-        </div>
+        </motion.div>
         <div className='image-box'>
           <StaticImage
             src='https://res.cloudinary.com/dvme554nj/image/upload/v1620187660/coleman/fuel.jpg'
@@ -94,7 +103,7 @@ const Fuel = (props) => {
   );
 };
 
-const Wrapper = styled.main`
+const Wrapper = styled(motion.main)`
   margin-top: -5rem;
   min-height: calc(100vh - 5rem);
   display: flex;

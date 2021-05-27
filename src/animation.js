@@ -1,7 +1,13 @@
-export const fade = {
-  hidden: { opacity: 0 },
+export const pageAnimation = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
   show: {
     opacity: 1,
-    transition: { ease: 'easeOut', duration: 5 },
+    x: 0,
+    transition: {
+      duration: 1,
+    },
   },
 };

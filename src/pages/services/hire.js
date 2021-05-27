@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../../animation';
+
 const accordionData = {
   title: 'More Specifications',
   content_one: `Yellow machinery`,
@@ -34,7 +37,13 @@ const Hire = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='Plant Hire' />
-        <div className='info-box'>
+        <motion.div
+          exit='exit'
+          variants={pageAnimation}
+          initial='hidden'
+          animate='show'
+          className='info-box'
+        >
           <h2>
             Plant <strong>Hire</strong>
           </h2>
@@ -73,7 +82,7 @@ const Hire = (props) => {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className='image-box'>
           <StaticImage
             src='https://res.cloudinary.com/dvme554nj/image/upload/v1620189044/planthire.jpg'
@@ -88,7 +97,7 @@ const Hire = (props) => {
   );
 };
 
-const Wrapper = styled.main`
+const Wrapper = styled(motion.main)`
   margin-top: -5rem;
   min-height: calc(100vh - 5rem);
   display: flex;

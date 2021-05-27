@@ -8,22 +8,41 @@ import { useScroll } from '../../components/useScroll';
 import { fade } from '../../animation';
 
 const About = (props) => {
-  // const slideInRight = {
-  //   hidden: { x: 100 },
-  //   show: { x: 0, transition: { duration: 0.75, ease: 'easeOut' } },
-  // };
+  const container = {
+    hidden: {
+      x: 5,
+    },
+    show: {
+      x: 0,
+      transition: {
+        duration: 1.75,
+        ease: 'easeOut',
+        staggerChildren: 1,
+        when: 'afterChildren',
+      },
+    },
+  };
+  const slideInRight = {
+    hidden: { x: 100 },
+    show: { x: 0, transition: { duration: 0.75, ease: 'easeOut' } },
+  };
+
+  const textSlideInFromLeft = {
+    hidden: { opacity: 0, x: 50 },
+    show: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeOut' } },
+  };
   const [element, controls] = useScroll();
   return (
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
-        <div className='about-wrapper'>
-          <OverlayWrap
-            variants={fade}
-            animate={controls}
-            initial='hidden'
-            ref={element}
-          >
+        <motion.div
+          variants={container}
+          initial='hidden'
+          animate='show'
+          className='about-wrapper'
+        >
+          <div className='overlay'>
             <div className='top-box'>
               <motion.div
                 // variants={slideInRight}
@@ -42,7 +61,11 @@ const About = (props) => {
                 <h4>Johnny Coleman</h4>
               </motion.div>
               <div className='txt-box'>
-                <p>
+                <motion.p
+                  variants={textSlideInFromLeft}
+                  initial='hidden'
+                  animate='show'
+                >
                   Coleman Traders (Pty) Ltd was registered in 2016, focusing on
                   selling containers and plant hire/sales. Since the economy
                   took it’s toll in 2020, the director started focusing on small
@@ -51,7 +74,7 @@ const About = (props) => {
                   honest and reliable wholesale services. Thanks to dedicated
                   staff led by Johnny, the company has been able to grow in both
                   size and reputation.
-                </p>
+                </motion.p>
               </div>
             </div>
             <div className='two-column-alt'>
@@ -196,8 +219,8 @@ const About = (props) => {
               </div>
             </div>
             <div className='spacer'></div>
-          </OverlayWrap>
-        </div>
+          </div>
+        </motion.div>
       </Wrapper>
     </Layout>
   );
