@@ -3,41 +3,35 @@ import { Layout } from '../../components';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
 import { StaticImage } from 'gatsby-plugin-image';
-
-function useOnScreen(options) {
-  const [ref, setRef] = React.useState(null);
-  const [visible, setVisible] = React.useState(false);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting);
-    }, options);
-    if (ref) {
-      observer.observe(ref);
-    }
-
-    return () => {
-      if (ref) {
-        observer.unobserve(ref);
-      }
-    };
-  }, [ref, options]);
-
-  return [setRef, visible];
-}
+import { motion } from 'framer-motion';
+import { useScroll } from '../../components/useScroll';
+import { fade } from '../../animation';
 
 const About = (props) => {
-  // const path = props.location.pathname.slice(1);
-  // console.log('Sub Page Props:', props);
-  const [setRef, visible] = useOnScreen({ threshold: 0.4 });
+  // const slideInRight = {
+  //   hidden: { x: 100 },
+  //   show: { x: 0, transition: { duration: 0.75, ease: 'easeOut' } },
+  // };
+  const [element, controls] = useScroll();
   return (
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
         <div className='about-wrapper'>
-          <div className='overlay'>
+          <OverlayWrap
+            variants={fade}
+            animate={controls}
+            initial='hidden'
+            ref={element}
+          >
             <div className='top-box'>
-              <div className='img-box'>
+              <motion.div
+                // variants={slideInRight}
+                initial='hidden'
+                animate='show'
+                className='img-box'
+                ref={element}
+              >
                 <StaticImage
                   src='../../images/company/director.png'
                   alt='excavators'
@@ -46,7 +40,7 @@ const About = (props) => {
                   className='border-radius-50'
                 ></StaticImage>
                 <h4>Johnny Coleman</h4>
-              </div>
+              </motion.div>
               <div className='txt-box'>
                 <p>
                   Coleman Traders (Pty) Ltd was registered in 2016, focusing on
@@ -76,17 +70,14 @@ const About = (props) => {
                   and employee development responsibilities.
                 </p>
               </div>
-              <div
-                className='img-box'
-                ref={setRef}
-                style={{ opacity: visible ? 1 : 0 }}
-              >
+              <div className='img-box' initial='hidden' ref={element}>
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
                   alt='trucks'
                   placeholder='tracedSVG'
                   width={800}
                   className='border-radius-50'
+                  ref={element}
                 ></StaticImage>
               </div>
             </div>
@@ -205,12 +196,14 @@ const About = (props) => {
               </div>
             </div>
             <div className='spacer'></div>
-          </div>
+          </OverlayWrap>
         </div>
       </Wrapper>
     </Layout>
   );
 };
+
+const OverlayWrap = styled.div``;
 
 const Wrapper = styled.main`
   min-height: calc(100vh - 5rem);
