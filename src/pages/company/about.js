@@ -1,26 +1,17 @@
 import React from 'react';
 import { Layout } from '../../components';
+import AboutOne from '../../components/AboutOne';
+import AboutTwo from '../../components/AboutTwo';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
 import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import { useScroll } from '../../components/useScroll';
 import { fade } from '../../animation';
-
-// import { useInView } from 'react-intersection-observer';
-// import { useAnimation } from 'framer-motion';
+import { scrollReveal } from '../../animation';
 
 const About = (props) => {
   const [element, controls] = useScroll();
-  // console.log('useinview', view);
-  // const [element, view] = useInView({ threshold: 0.2 });
-  // const controls = useAnimation();
-  // if (view) {
-  //   controls.start('show');
-  // } else {
-  //   controls.start('hidden');
-  // }
-
   const container = {
     hidden: {
       x: 5,
@@ -48,18 +39,10 @@ const About = (props) => {
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
-        <motion.div
-          // variants={fade}
-          initial='hidden'
-          // animate={controls}
-          className='about-wrapper'
-        >
+        <motion.div initial='show' className='about-wrapper'>
           <div className='overlay'>
             <div className='top-box'>
-              <motion.div
-                // variants={slideInRight}
-                className='img-box'
-              >
+              <motion.div className='img-box'>
                 <StaticImage
                   src='../../images/company/director.png'
                   alt='excavators'
@@ -86,60 +69,19 @@ const About = (props) => {
                 </motion.p>
               </div>
             </div>
-            <div className='two-column-alt'>
-              <div className='txt-box'>
-                <h3>
-                  Our <strong>Mission</strong>
-                </h3>
-                <p>
-                  Coleman Traders (Pty) Ltd is dedicated to delivering
-                  effective, efficient, respectful services with integrity and
-                  accountability using all our proven innovative methods, and
-                  still expanding our knowledge to embrace the needs of a
-                  continuously changing industry. We proudly offer quality
-                  assurance, operational excellence and a fanatical concern for
-                  our customer’s needs whilst complying with all environmental
-                  and employee development responsibilities.
-                </p>
-              </div>
-              <motion.div
-                className='img-box'
-                variants={fade}
-                initial='show'
-                ref={element}
-                animate={controls}
-              >
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
-                  alt='trucks'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                ></StaticImage>
-              </motion.div>
-            </div>
-            <div className='two-column'>
-              <motion.div className='img-box' variants={fade} initial='show'>
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572144/coleman/excavator_wzpmia.jpg'
-                  alt='aerial construction site'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                ></StaticImage>
-              </motion.div>
-              <div className='txt-box'>
-                <h3>
-                  Our <strong>Vision</strong>
-                </h3>
-                <p>
-                  Our key success factors are strategic focus, people,
-                  operations, marketing and finances. Depending on these factors
-                  we strive to be recognised as a premier Fuel Wholesale, Plant
-                  Hire and Containers distributing company in South Africa.
-                </p>
-              </div>
-            </div>
+            <AboutOne
+              variants={scrollReveal}
+              initial='hidden'
+              ref={element}
+              animate={controls}
+            />
+            <AboutTwo
+              variants={scrollReveal}
+              initial='hidden'
+              ref={element}
+              animate={controls}
+            />
+
             <div className='two-column-alt'>
               <div className='txt-box'>
                 <h3>
@@ -155,7 +97,13 @@ const About = (props) => {
                   <li>We look beyond the present to deliver future value</li>
                 </ul>
               </div>
-              <div className='img-box'>
+              <motion.div
+                className='img-box'
+                variants={fade}
+                initial='hidden'
+                ref={element}
+                animate={controls}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572153/coleman/pexels-pixabay-461789_lih0jj.jpg'
                   alt='excavators'
@@ -163,10 +111,16 @@ const About = (props) => {
                   width={800}
                   className='border-radius-50'
                 ></StaticImage>
-              </div>
+              </motion.div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <motion.div
+                className='img-box'
+                variants={scrollReveal}
+                initial='hidden'
+                ref={element}
+                animate={controls}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572139/coleman/pexels-chanaka-906494_jd59pp.jpg'
                   alt='excavators'
@@ -174,7 +128,7 @@ const About = (props) => {
                   width={800}
                   className='border-radius-50'
                 ></StaticImage>
-              </div>
+              </motion.div>
               <div className='txt-box'>
                 <h3>
                   The <strong>Why</strong>
@@ -199,7 +153,13 @@ const About = (props) => {
                   <li>Do it all in the spirit of Coleman Traders</li>
                 </ul>
               </div>
-              <div className='img-box'>
+              <motion.div
+                className='img-box'
+                variants={scrollReveal}
+                initial='hidden'
+                ref={element}
+                animate={controls}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572145/coleman/pexels-joseph-fuller-5578887_glotxr.jpg'
                   alt='excavators'
@@ -208,10 +168,16 @@ const About = (props) => {
                   className='border-radius-50'
                   ref={element}
                 ></StaticImage>
-              </div>
+              </motion.div>
             </div>
             <div className='two-column'>
-              <div className='img-box'>
+              <motion.div
+                className='img-box'
+                variants={scrollReveal}
+                initial='hidden'
+                ref={element}
+                animate={controls}
+              >
                 <StaticImage
                   src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-roger-brown-5125783_ndnh1x.jpg'
                   alt='excavators'
@@ -220,7 +186,7 @@ const About = (props) => {
                   className='border-radius-50'
                   ref={element}
                 ></StaticImage>
-              </div>
+              </motion.div>
               <div className='txt-box'>
                 <h3>
                   The <strong>What's</strong>
