@@ -47,12 +47,7 @@ const Contact = (props) => {
             </div>
           </div>
           <div className='form-box'>
-            <form
-              name='contact'
-              method='POST'
-              data-netlify='true'
-              action='/success'
-            >
+            <form method='post' action='https://formspree.io/f/mwkaoqvn'>
               <p>
                 <label>
                   Your Name: <br />
@@ -62,7 +57,7 @@ const Contact = (props) => {
               <p>
                 <label>
                   Your Email: <br />
-                  <input type='email' name='email' />
+                  <input type='email' name='_replyto' />
                 </label>
               </p>
               <p>
