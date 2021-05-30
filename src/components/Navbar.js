@@ -46,7 +46,7 @@ const Wrapper = styled.nav`
   position: relative;
   background: var(--clr-grey-1);
   z-index: 1;
-  height: 5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   .nav-center {
@@ -59,8 +59,8 @@ const Wrapper = styled.nav`
       display: flex;
 
       img {
-        width: 6em;
-        height: 2em;
+        width: 10em;
+        height: 3.5em;
       }
       h2 {
         display: flex;

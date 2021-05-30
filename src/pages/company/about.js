@@ -103,8 +103,12 @@ const Wrapper = styled(motion.main)`
         margin: 2em 0;
         h3 {
           margin: 0.5rem 2rem;
+          /* font-size: 2.25rem; */
         }
-        p,
+        p {
+          margin: 0 2rem;
+          /* font-size: 1.25rem; */
+        }
         ul {
           margin: 0 2rem;
         }
@@ -129,8 +133,12 @@ const Wrapper = styled(motion.main)`
         margin: 2em 0;
         h3 {
           margin: 0.5rem 2rem;
+          /* font-size: 2.25rem; */
         }
-        p,
+        p {
+          margin: 0 2rem;
+          /* font-size: 1.25rem; */
+        }
         ul {
           margin: 0 2rem;
         }

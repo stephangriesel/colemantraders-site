@@ -68,7 +68,7 @@ Global Styles
 body {
   font-family: var(--ff-secondary);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 ul {
   list-style-type: none;
@@ -93,35 +93,35 @@ h4 {
   font-weight: 400;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.50rem;
 }
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.900rem;
 }
 p {
   margin-bottom: 1.25rem;
 }
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
   }
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   body {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   h1,
   h2,
