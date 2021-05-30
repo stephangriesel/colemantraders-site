@@ -3,7 +3,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
 import { fade } from '../animation';
-import { scrollReveal } from '../animation';
 
 const AboutTwo = () => {
   const [element, controls] = useScroll();
@@ -11,7 +10,7 @@ const AboutTwo = () => {
     <div className='two-column'>
       <motion.div
         className='img-box'
-        variants={scrollReveal}
+        variants={fade}
         initial='hidden'
         ref={element}
         animate={controls}
