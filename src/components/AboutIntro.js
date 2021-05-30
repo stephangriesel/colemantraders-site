@@ -20,7 +20,7 @@ const AboutTwo = () => {
     <div className='top-box'>
       <motion.div className='img-box'>
         <StaticImage
-          src='../../images/company/director.png'
+          src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
           alt='excavators'
           placeholder='tracedSVG'
           width={800}

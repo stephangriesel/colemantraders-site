@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from '../../components';
-import AboutIntro from '../../components/AboutIntro';
+// import AboutIntro from '../../components/AboutIntro';
 import AboutOne from '../../components/AboutOne';
 import AboutTwo from '../../components/AboutTwo';
 import AboutThree from '../../components/AboutThree';
