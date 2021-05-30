@@ -51,6 +51,7 @@ const Container = (props) => {
             safety procedures and awareness. Our equipment, drivers and crane
             operators are certified at highly recommended testing facilities.
           </p>
+
           <div className='accordion'>
             <div className='accordion-item'>
               <div
@@ -117,21 +118,18 @@ const Wrapper = styled(motion.main)`
     .accordion {
       max-width: 90%;
       margin: 2rem auto;
-      transition: ease-in-out 1s;
+      display: flex;
+      flex-direction: column;
       .accordion-content {
         padding: 1rem;
-      }
-      .accordion-content {
         border-bottom: 1px solid #929292;
         border-right: 1px solid #929292;
         border-left: 1px solid #929292;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        transition: ease-in-out 1s;
       }
       .accordion-title {
         color: var(--clr-white);
-        transition: ease-in-out 0.5s;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -140,6 +138,14 @@ const Wrapper = styled(motion.main)`
         padding: 1rem;
         &:hover {
           background-color: var(--clr-grey-1);
+        }
+      }
+      .accordion-item {
+        flex-basis: 20px;
+        flex-grow: 0;
+        transition: flex-grow 2s ease-out;
+        &.accordion-content {
+          flex-grow: 1;
         }
       }
     }
