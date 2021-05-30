@@ -1,14 +1,16 @@
 import React from 'react';
 import { Layout } from '../../components';
+import AboutIntro from '../../components/AboutIntro';
 import AboutOne from '../../components/AboutOne';
 import AboutTwo from '../../components/AboutTwo';
+import AboutThree from '../../components/AboutThree';
+import AboutFour from '../../components/AboutFour';
+import AboutFive from '../../components/AboutFive';
+import AboutSix from '../../components/AboutSix';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
-import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import { useScroll } from '../../components/useScroll';
-import { fade } from '../../animation';
-import { scrollReveal } from '../../animation';
 
 const About = (props) => {
   const [element, controls] = useScroll();
@@ -26,180 +28,20 @@ const About = (props) => {
       },
     },
   };
-  const slideInRight = {
-    hidden: { x: 100 },
-    show: { x: 0, transition: { duration: 0.75, ease: 'easeOut' } },
-  };
 
-  const textSlideInFromLeft = {
-    hidden: { opacity: 0, x: 50 },
-    show: { opacity: 1, x: 0, transition: { duration: 2, ease: 'easeOut' } },
-  };
   return (
     <Layout>
       <Wrapper>
         <SEO title='About Us' />
         <motion.div initial='show' className='about-wrapper'>
           <div className='overlay'>
-            <div className='top-box'>
-              <motion.div className='img-box'>
-                <StaticImage
-                  src='../../images/company/director.png'
-                  alt='excavators'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                ></StaticImage>
-                <h4>Johnny Coleman</h4>
-              </motion.div>
-              <div className='txt-box'>
-                <motion.p
-                  variants={textSlideInFromLeft}
-                  initial='hidden'
-                  animate='show'
-                >
-                  Coleman Traders (Pty) Ltd was registered in 2016, focusing on
-                  selling containers and plant hire/sales. Since the economy
-                  took it’s toll in 2020, the director started focusing on small
-                  volume diesel deliveries which posed low risk. As he evolved
-                  in the industry, he identified a demand in the market for
-                  honest and reliable wholesale services. Thanks to dedicated
-                  staff led by Johnny, the company has been able to grow in both
-                  size and reputation.
-                </motion.p>
-              </div>
-            </div>
-            <AboutOne
-              variants={scrollReveal}
-              initial='hidden'
-              ref={element}
-              animate={controls}
-            />
-            <AboutTwo
-              variants={scrollReveal}
-              initial='hidden'
-              ref={element}
-              animate={controls}
-            />
-
-            <div className='two-column-alt'>
-              <div className='txt-box'>
-                <h3>
-                  Core <strong>Values</strong>
-                </h3>
-                <ul>
-                  <li>Commitment to customers above all else</li>
-                  <li>We can generate profit without acting unethically</li>
-                  <li>Great just isn’t good enough</li>
-                  <li>Connect with transparency, dignity and respect</li>
-                  <li>Act with courage</li>
-                  <li>Awareness of social and physical environment</li>
-                  <li>We look beyond the present to deliver future value</li>
-                </ul>
-              </div>
-              <motion.div
-                className='img-box'
-                variants={fade}
-                initial='hidden'
-                ref={element}
-                animate={controls}
-              >
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572153/coleman/pexels-pixabay-461789_lih0jj.jpg'
-                  alt='excavators'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                ></StaticImage>
-              </motion.div>
-            </div>
-            <div className='two-column'>
-              <motion.div
-                className='img-box'
-                variants={scrollReveal}
-                initial='hidden'
-                ref={element}
-                animate={controls}
-              >
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572139/coleman/pexels-chanaka-906494_jd59pp.jpg'
-                  alt='excavators'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                ></StaticImage>
-              </motion.div>
-              <div className='txt-box'>
-                <h3>
-                  The <strong>Why</strong>
-                </h3>
-                <p>
-                  Empower People Today to Build a Better Future for the Next
-                  Generation
-                </p>
-              </div>
-            </div>
-            <div className='two-column-alt'>
-              <div className='txt-box'>
-                <h3>
-                  The <strong>Hows</strong>
-                </h3>
-                <ul>
-                  <li>Do the right thing, the first time - Always</li>
-                  <li>Lead by example, follow ethically</li>
-                  <li>Bring out the best in everyone</li>
-                  <li>Make them enquire again</li>
-                  <li>Embrace transparency</li>
-                  <li>Do it all in the spirit of Coleman Traders</li>
-                </ul>
-              </div>
-              <motion.div
-                className='img-box'
-                variants={scrollReveal}
-                initial='hidden'
-                ref={element}
-                animate={controls}
-              >
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572145/coleman/pexels-joseph-fuller-5578887_glotxr.jpg'
-                  alt='excavators'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                  ref={element}
-                ></StaticImage>
-              </motion.div>
-            </div>
-            <div className='two-column'>
-              <motion.div
-                className='img-box'
-                variants={scrollReveal}
-                initial='hidden'
-                ref={element}
-                animate={controls}
-              >
-                <StaticImage
-                  src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-roger-brown-5125783_ndnh1x.jpg'
-                  alt='excavators'
-                  placeholder='tracedSVG'
-                  width={800}
-                  className='border-radius-50'
-                  ref={element}
-                ></StaticImage>
-              </motion.div>
-              <div className='txt-box'>
-                <h3>
-                  The <strong>What's</strong>
-                </h3>
-                <ul>
-                  <li>Identify & invest in improvement & development</li>
-                  <li>Delight our customers</li>
-                  <li>Honour our commitments</li>
-                  <li>Incorporate new technology</li>
-                  <li>Improve financial security</li>
-                </ul>
-              </div>
-            </div>
+            {/* <AboutIntro initial='hidden' ref={element} animate={controls} /> */}
+            <AboutOne initial='hidden' ref={element} animate={controls} />
+            <AboutTwo initial='hidden' ref={element} animate={controls} />
+            <AboutThree initial='hidden' ref={element} animate={controls} />
+            <AboutFour initial='hidden' ref={element} animate={controls} />
+            <AboutFive initial='hidden' ref={element} animate={controls} />
+            <AboutSix initial='hidden' ref={element} animate={controls} />
             <div className='spacer'></div>
           </div>
         </motion.div>

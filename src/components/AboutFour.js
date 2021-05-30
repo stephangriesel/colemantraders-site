@@ -17,8 +17,8 @@ const AboutTwo = () => {
         animate={controls}
       >
         <StaticImage
-          src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572144/coleman/excavator_wzpmia.jpg'
-          alt='aerial construction site'
+          src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572139/coleman/pexels-chanaka-906494_jd59pp.jpg'
+          alt='excavators'
           placeholder='tracedSVG'
           width={800}
           className='border-radius-50'
@@ -26,13 +26,10 @@ const AboutTwo = () => {
       </motion.div>
       <div className='txt-box'>
         <h3>
-          Our <strong>Vision</strong>
+          The <strong>Why</strong>
         </h3>
         <p>
-          Our key success factors are strategic focus, people, operations,
-          marketing and finances. Depending on these factors we strive to be
-          recognised as a premier Fuel Wholesale, Plant Hire and Containers
-          distributing company in South Africa.
+          Empower People Today to Build a Better Future for the Next Generation
         </p>
       </div>
     </div>

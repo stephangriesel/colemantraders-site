@@ -25,7 +25,7 @@ const AboutOne = () => {
       </div>
       <motion.div
         className='img-box'
-        variants={scrollReveal}
+        variants={fade}
         initial='hidden'
         ref={element}
         animate={controls}
