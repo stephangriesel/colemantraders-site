@@ -98,6 +98,7 @@ const Wrapper = styled(motion.main)`
   place-items: center;
   padding-top: 5rem;
   justify-content: center;
+  overflow-x: hidden;
   .info-box {
     width: 30em;
     margin: 3em;
@@ -113,6 +114,7 @@ const Wrapper = styled(motion.main)`
     p {
       margin: 2rem;
       text-align: left;
+      padding: 0 1.5rem;
     }
 
     .accordion {
@@ -120,6 +122,7 @@ const Wrapper = styled(motion.main)`
       margin: 2rem auto;
       display: flex;
       flex-direction: column;
+
       .accordion-content {
         padding: 1rem;
         border-bottom: 1px solid #929292;
@@ -129,6 +132,7 @@ const Wrapper = styled(motion.main)`
         border-bottom-right-radius: 5px;
       }
       .accordion-title {
+        margin: 0 1.5rem;
         color: var(--clr-white);
         display: flex;
         flex-direction: row;

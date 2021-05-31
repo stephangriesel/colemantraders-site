@@ -111,6 +111,7 @@ const Wrapper = styled(motion.main)`
   place-items: center;
   padding-top: 5rem;
   justify-content: center;
+  overflow-x: hidden;
   .info-box {
     width: 30em;
     margin: 3em;
@@ -127,6 +128,7 @@ const Wrapper = styled(motion.main)`
     p {
       text-align: left;
       margin: 2em;
+      padding: 0 1.5rem;
     }
 
     .accordion {
@@ -145,6 +147,7 @@ const Wrapper = styled(motion.main)`
         transition: ease-in-out 1s;
       }
       .accordion-title {
+        margin: 0 1.5rem;
         color: var(--clr-white);
         transition: ease-in-out 0.5s;
         display: flex;
