@@ -1,7 +1,6 @@
 import React from 'react';
 import Background from './Background';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 const Hero = ({ projects }) => {
   const images = projects.map((item) => {

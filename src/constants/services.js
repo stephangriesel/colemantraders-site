@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  GiCompass,
-  GiDiamondHard,
-  GiStabbedNote,
-  GiBriefcase,
-} from 'react-icons/gi';
+import { GiBriefcase } from 'react-icons/gi';
 import { RiBuilding2Line } from 'react-icons/ri';
 import { GiMineTruck, GiFuelTank } from 'react-icons/gi';
 export default [

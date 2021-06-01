@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className='nav-header'>
           <Link to='/'>
             <div className='logo'>
-              <img src={logo} />
+              <img src={logo} alt='logo' />
               {/* <h2>Coleman Traders</h2> */}
             </div>
           </Link>

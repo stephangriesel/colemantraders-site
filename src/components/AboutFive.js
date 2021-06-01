@@ -3,7 +3,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import { useScroll } from '../components/useScroll';
 import { fade } from '../animation';
-import { scrollReveal } from '../animation';
 
 const AboutTwo = () => {
   const [element, controls] = useScroll();

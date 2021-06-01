@@ -14,20 +14,6 @@ import { useScroll } from '../../components/useScroll';
 
 const About = (props) => {
   const [element, controls] = useScroll();
-  const container = {
-    hidden: {
-      x: 5,
-    },
-    show: {
-      x: 0,
-      transition: {
-        duration: 1.75,
-        ease: 'easeOut',
-        staggerChildren: 1,
-        when: 'afterChildren',
-      },
-    },
-  };
 
   return (
     <Layout>
