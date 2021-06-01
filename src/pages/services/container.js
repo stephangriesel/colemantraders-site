@@ -124,6 +124,7 @@ const Wrapper = styled(motion.main)`
       flex-direction: column;
 
       .accordion-content {
+        margin: 0 1.5rem;
         padding: 1rem;
         border-bottom: 1px solid #929292;
         border-right: 1px solid #929292;

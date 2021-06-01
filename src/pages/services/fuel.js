@@ -136,6 +136,7 @@ const Wrapper = styled(motion.main)`
       margin: 2rem auto;
       transition: ease-in-out 1s;
       .accordion-content {
+        margin: 0 1.5rem;
         padding: 1rem;
       }
       .accordion-content {
