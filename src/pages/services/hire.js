@@ -5,7 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../../animation';
+import { slideIn } from '../../animation';
 
 const accordionData = {
   title: 'More Specifications',
@@ -39,7 +39,7 @@ const Hire = (props) => {
         <SEO title='Plant Hire' />
         <motion.div
           exit='exit'
-          variants={pageAnimation}
+          variants={slideIn}
           initial='hidden'
           animate='show'
           className='info-box'

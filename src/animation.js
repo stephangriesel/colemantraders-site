@@ -1,7 +1,7 @@
-export const pageAnimation = {
+export const slideIn = {
   hidden: {
     opacity: 0,
-    x: -100,
+    x: -20,
   },
   show: {
     opacity: 1,
@@ -12,7 +12,7 @@ export const pageAnimation = {
   },
   exit: {
     opacity: 0,
-    x: -100,
+    x: -20,
     transition: {
       duration: 1,
     },
