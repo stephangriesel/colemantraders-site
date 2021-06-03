@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <Wrapper>
-      <p>&copy; {new Date().getFullYear()}</p>
+      <p>Coleman Traders &copy; {new Date().getFullYear()}</p>
     </Wrapper>
   );
 };
