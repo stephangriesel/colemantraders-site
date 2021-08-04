@@ -1,8 +1,14 @@
 import React from 'react';
-import { GrGroup, GrContactInfo } from 'react-icons/gr';
-import { RiBuilding2Line } from 'react-icons/ri';
-import { GiMineTruck, GiFuelTank } from 'react-icons/gi';
+import {GrGroup, GrContactInfo} from 'react-icons/gr';
+import {RiBuilding2Line} from 'react-icons/ri';
+import {GiMineTruck, GiFuelTank} from 'react-icons/gi';
 export default [
+  {
+    page: 'services',
+    label: 'fuel',
+    url: `/services/fuel`,
+    icon: <GiFuelTank className='icon' />,
+  },
   {
     page: 'services',
     label: 'containers',
@@ -14,12 +20,6 @@ export default [
     label: 'plant',
     url: `/services/hire`,
     icon: <GiMineTruck className='icon' />,
-  },
-  {
-    page: 'services',
-    label: 'fuel',
-    url: `/services/fuel`,
-    icon: <GiFuelTank className='icon' />,
   },
   {
     page: 'company',

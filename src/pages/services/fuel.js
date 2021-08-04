@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Layout } from '../../components';
+import React, {useState} from 'react';
+import {Layout} from '../../components';
 import styled from 'styled-components';
-import { StaticImage } from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
-import { motion } from 'framer-motion';
-import { slideIn } from '../../animation';
+import {motion} from 'framer-motion';
+import {slideIn} from '../../animation';
 
 const accordionData = {
   title: 'More Specifications',
@@ -15,7 +15,7 @@ const accordionData = {
   content_four: `Petrol`,
   content_five: `LSR`,
   content_six: `Fluorine Gas`,
-  content_seven: `LP Gas`,
+  content_seven: `LPG Gas`,
 };
 
 const {
