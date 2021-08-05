@@ -1,8 +1,8 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { motion } from 'framer-motion';
-import { useScroll } from '../components/useScroll';
-import { fade } from '../animation';
+import {StaticImage} from 'gatsby-plugin-image';
+import {motion} from 'framer-motion';
+import {useScroll} from '../components/useScroll';
+import {fade} from '../animation';
 
 const AboutOne = () => {
   const [element, controls] = useScroll();
@@ -30,7 +30,7 @@ const AboutOne = () => {
         animate={controls}
       >
         <StaticImage
-          src='https://res.cloudinary.com/dvme554nj/image/upload/v1621572150/coleman/pexels-quintin-gellar-2199293_wtvvuu.jpg'
+          src='https://res.cloudinary.com/dvme554nj/image/upload/v1628135732/coleman/26_l0dwgj.png'
           alt='trucks'
           placeholder='tracedSVG'
           width={800}
