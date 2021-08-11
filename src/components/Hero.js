@@ -44,6 +44,9 @@ const Hero = ({projects}) => {
                 onClick={() => {
                   setIndex(btnIndex);
                 }}
+                onKeyDown={() => {
+                  setIndex(btnIndex);
+                }}
                 className={index === btnIndex ? 'active' : undefined}
               ></span>
             );
