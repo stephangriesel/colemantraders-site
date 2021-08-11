@@ -40,6 +40,8 @@ const Hero = ({projects}) => {
           {images.map((_, btnIndex) => {
             return (
               <span
+                role='hero'
+                // aria-hidden='true'
                 key={btnIndex}
                 onClick={() => {
                   setIndex(btnIndex);
