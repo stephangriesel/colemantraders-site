@@ -1,12 +1,12 @@
 import React from 'react';
 import Background from './Background';
 import styled from 'styled-components';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-const Hero = ({ projects }) => {
+import {FiChevronRight, FiChevronLeft} from 'react-icons/fi';
+const Hero = ({projects}) => {
   const images = projects.map((item) => {
     const {
       data: {
-        image: { localFiles },
+        image: {localFiles},
       },
     } = item;
     const image = localFiles[0].childImageSharp.fluid;
@@ -22,7 +22,7 @@ const Hero = ({ projects }) => {
     if (index > lastIndex) {
       setIndex(0);
     }
-  });
+  }, [images.length, index]);
   return (
     <Wrapper>
       <Background image={images[index]}>
