@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import { GatsbyContext } from '../context/context';
-const NavLink = ({ page }) => {
-  const { links } = useContext(GatsbyContext);
+import {Link} from 'gatsby';
+import {GatsbyContext} from '../context/context';
+const NavLink = ({page}) => {
+  const {links} = useContext(GatsbyContext);
   return (
     <Wrapper>
       <button>{page}</button>
       <div className='links'>
         {links.map((link, index) => {
-          const { url, label, icon } = link;
+          const {url, label, icon} = link;
           if (link.page === page) {
             return (
               <Link className='link-temp' to={url} key={index}>
@@ -18,6 +18,8 @@ const NavLink = ({ page }) => {
                 {label}
               </Link>
             );
+          } else {
+            return false;
           }
         })}
         <div className='caret'></div>
