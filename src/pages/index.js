@@ -11,7 +11,7 @@ import {
 } from '../components';
 import SEO from '../components/seo';
 const HomePage = ({data}) => {
-  console.log('Query Data:', data);
+  // console.log('Query Data:', data);
   const {
     allAirtable: {nodes: projects},
   } = data;

@@ -32,7 +32,7 @@ const {
 const Fuel = (props) => {
   const path = props.location.pathname.slice(1);
   const [isActive, setIsActive] = useState(false);
-  console.log('Sub Page Props:', props);
+  // console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>

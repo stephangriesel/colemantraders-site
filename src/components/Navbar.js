@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import styled from 'styled-components';
 import logo from '../images/logo2.png';
-import { GoThreeBars } from 'react-icons/go';
-import { Link } from 'gatsby';
+import {GoThreeBars} from 'react-icons/go';
+import {Link} from 'gatsby';
 import NavLink from './NavLink';
-import { GatsbyContext } from '../context/context';
+import {GatsbyContext} from '../context/context';
 
 const Navbar = () => {
-  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext);
+  const {isSidebarOpen, showSidebar, links} = useContext(GatsbyContext);
   const tempLinks = [
     ...new Set(
       links.map((link) => {
@@ -15,7 +15,7 @@ const Navbar = () => {
       })
     ),
   ];
-  console.log('Check temp links:', tempLinks);
+  // console.log('Check temp links:', tempLinks);
   return (
     <Wrapper>
       <div className='nav-center'>

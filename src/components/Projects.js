@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import Title from './Title';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import SearchButtons from './SearchButtons';
-const Projects = ({ projects: data, title, page }) => {
+const Projects = ({projects: data, title, page}) => {
   const [projects, setProjects] = React.useState(data);
 
   const setBackToAll = () => {
@@ -23,9 +23,9 @@ const Projects = ({ projects: data, title, page }) => {
       )}
       <div className='section-center'>
         {projects.map((item) => {
-          console.log('Items', item);
-          const { id } = item;
-          const { name, type } = item.data;
+          // console.log('Items', item);
+          const {id} = item;
+          const {name, type} = item.data;
           const fluid = item.data.image.localFiles[0].childImageSharp.fluid;
           return (
             <article key={id}>

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Layout } from '../../components';
+import React, {useState} from 'react';
+import {Layout} from '../../components';
 import styled from 'styled-components';
-import { StaticImage } from 'gatsby-plugin-image';
+import {StaticImage} from 'gatsby-plugin-image';
 import SEO from '../../components/seo';
 
-import { motion } from 'framer-motion';
-import { slideIn } from '../../animation';
+import {motion} from 'framer-motion';
+import {slideIn} from '../../animation';
 
 const accordionData = {
   title: 'More Specifications',
@@ -32,7 +32,7 @@ const {
 const Hire = (props) => {
   const path = props.location.pathname.slice(1);
   const [isActive, setIsActive] = useState(false);
-  console.log('Sub Page Props:', props);
+  // console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>

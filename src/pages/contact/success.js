@@ -1,11 +1,11 @@
 import React from 'react';
-import { Layout } from '../../components';
+import {Layout} from '../../components';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
 
 const Contact = (props) => {
   const path = props.location.pathname.slice(1);
-  console.log('Sub Page Props:', props);
+  // console.log('Sub Page Props:', props);
   return (
     <Layout>
       <Wrapper>

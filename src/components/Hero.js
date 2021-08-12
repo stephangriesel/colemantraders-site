@@ -12,7 +12,7 @@ const Hero = ({projects}) => {
     const image = localFiles[0].childImageSharp.fluid;
     return image;
   });
-  console.log('Test Images:', images);
+  // console.log('Test Images:', images);
   const [index, setIndex] = React.useState(0);
   React.useEffect(() => {
     const lastIndex = images.length - 1;
