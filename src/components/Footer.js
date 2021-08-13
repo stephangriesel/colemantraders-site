@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <Wrapper>
       <p>
-        Coleman Traders &copy; {new Date().getFullYear()} | Created and hosted
-        by <a href='https://www.consulitate.com'>Consulitate</a>
+        Coleman Traders &copy; {new Date().getFullYear()} | Created & Hosted by{' '}
+        <a href='https://www.consulitate.com'>Consulitate</a>
       </p>
     </Wrapper>
   );
