@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import services from '../constants/services';
-const About = () => {
+
+// https://reactjs.org/docs/forwarding-refs.html
+const About = React.forwardRef((props, ref) => {
   return (
     <Wrapper className='section'>
       <div className='section-center'>
-        {services.map(({ id, icon, label, text }) => {
+        {services.map(({id, icon, label, text}) => {
           return (
             <article key={id}>
               <span>{icon}</span>
@@ -17,7 +19,7 @@ const About = () => {
       </div>
     </Wrapper>
   );
-};
+});
 const Wrapper = styled.section`
   .section-center {
     margin-top: 4rem;
