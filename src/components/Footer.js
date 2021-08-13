@@ -3,7 +3,10 @@ import styled from 'styled-components';
 const Footer = () => {
   return (
     <Wrapper>
-      <p>Coleman Traders &copy; {new Date().getFullYear()}</p>
+      <p>
+        Coleman Traders &copy; {new Date().getFullYear()} | Created and hosted
+        by <a href='https://www.consulitate.com'>Consulitate</a>
+      </p>
     </Wrapper>
   );
 };
@@ -14,6 +17,9 @@ const Wrapper = styled.footer`
   background: var(--clr-grey-1);
   text-align: center;
   padding: 1rem;
+  a {
+    color: #fff;
+  }
   p {
     color: var(--clr-white);
     margin-bottom: 0;
